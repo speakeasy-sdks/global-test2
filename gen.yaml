@@ -1,0 +1,15 @@
+configVersion: 1.0.0
+generation:
+  comments:
+    disableComments: false
+    omitDescriptionIfSummaryPresent: false
+  baseServerURL: ""
+  sdkClassName: global-test-2
+  singleTagPerOp: false
+  tagNamespacingDisabled: false
+typescript:
+  version: 0.0.1
+  author: L-Test
+  clientServerStatusCodesAsErrors: true
+  maxMethodParams: 0
+  packageName: global-test2
