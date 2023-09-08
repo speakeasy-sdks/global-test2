@@ -16,7 +16,6 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
     post:
       summary: 'New Customer'
       operationId: newCustomer
@@ -144,15 +143,15 @@ paths:
                 name:
                   type: string
                   description: 'The Name of the customer.'
-                  example: deserunt
+                  example: vero
                 custom_identifier:
                   type: string
                   description: 'The Custom Identifier of the customer in the organization.'
-                  example: natus
+                  example: mollitia
                 email:
                   type: string
                   description: 'The Email of the customer.'
-                  example: barton.janet@example.net
+                  example: america.lang@example.net
                 thumb:
                   type: string
                   format: binary
@@ -164,13 +163,12 @@ paths:
                     - []
                   items:
                     type: object
-      security: []
     parameters:
       -
         in: path
         name: project_id
         description: 'The ID of the project.'
-        example: esse
+        example: est
         required: true
         schema:
           type: string
@@ -183,7 +181,6 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
     put:
       summary: ''
       operationId: putV1CustomersCustomer_id
@@ -202,20 +199,19 @@ paths:
                 name:
                   type: string
                   description: 'Must be at least 1 character. Must not be greater than 32 characters.'
-                  example: bcbtvnkuhm
+                  example: ctqzrn
                 custom_identifier:
                   type: string
                   description: 'Must be at least 1 character. Must not be greater than 255 characters.'
-                  example: zmm
+                  example: gxmce
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: ritchie.bernie@example.net
+                  example: anastasia.torphy@example.org
                 thumb:
                   type: string
                   format: binary
                   description: 'Must be an image. Must not be greater than 5120 kilobytes.'
-      security: []
     delete:
       summary: ''
       operationId: deleteV1CustomersCustomer_id
@@ -224,13 +220,12 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
         name: customer_id
         description: 'The ID of the customer.'
-        example: cum
+        example: quaerat
         required: true
         schema:
           type: string
@@ -243,13 +238,12 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
         name: template_id
         description: 'The ID of the template.'
-        example: placeat
+        example: ipsam
         required: true
         schema:
           type: string
@@ -272,16 +266,15 @@ paths:
                 function_name:
                   type: string
                   description: ''
-                  example: necessitatibus
+                  example: accusantium
               required:
                 - function_name
-      security: []
     parameters:
       -
         in: path
         name: template_id
         description: 'The ID of the template.'
-        example: quae
+        example: dolores
         required: true
         schema:
           type: string
@@ -289,7 +282,7 @@ paths:
         in: path
         name: function_name
         description: ''
-        example: et
+        example: sunt
         required: true
         schema:
           type: string
@@ -312,16 +305,15 @@ paths:
                 function_name:
                   type: string
                   description: ''
-                  example: at
+                  example: saepe
               required:
                 - function_name
-      security: []
     parameters:
       -
         in: path
         name: template_id
         description: 'The ID of the template.'
-        example: placeat
+        example: in
         required: true
         schema:
           type: string
@@ -329,7 +321,7 @@ paths:
         in: path
         name: function_name
         description: ''
-        example: ut
+        example: sit
         required: true
         schema:
           type: string
@@ -352,16 +344,15 @@ paths:
                 function_name:
                   type: string
                   description: ''
-                  example: facilis
+                  example: et
               required:
                 - function_name
-      security: []
     parameters:
       -
         in: path
         name: template_id
         description: 'The ID of the template.'
-        example: odio
+        example: quasi
         required: true
         schema:
           type: string
@@ -369,7 +360,7 @@ paths:
         in: path
         name: function_name
         description: ''
-        example: asperiores
+        example: quidem
         required: true
         schema:
           type: string
@@ -392,16 +383,15 @@ paths:
                 function_name:
                   type: string
                   description: ''
-                  example: ut
+                  example: qui
               required:
                 - function_name
-      security: []
     parameters:
       -
         in: path
         name: template_id
         description: 'The ID of the template.'
-        example: et
+        example: ut
         required: true
         schema:
           type: string
@@ -409,7 +399,7 @@ paths:
         in: path
         name: function_name
         description: ''
-        example: occaecati
+        example: eum
         required: true
         schema:
           type: string
@@ -422,13 +412,12 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
         name: template_id
         description: 'The ID of the template.'
-        example: vitae
+        example: eius
         required: true
         schema:
           type: string
@@ -441,13 +430,12 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
         name: project_id
         description: 'The ID of the project.'
-        example: ullam
+        example: id
         required: true
         schema:
           type: string
@@ -460,13 +448,12 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
         name: transaction_id
         description: 'The ID of the transaction.'
-        example: libero
+        example: consequatur
         required: true
         schema:
           type: string
@@ -479,13 +466,12 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
         name: transaction_id
         description: 'The ID of the transaction.'
-        example: omnis
+        example: nam
         required: true
         schema:
           type: string
@@ -498,13 +484,12 @@ paths:
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
         name: transaction_id
         description: 'The ID of the transaction.'
-        example: iste
+        example: perferendis
         required: true
         schema:
           type: string
@@ -527,14 +512,13 @@ paths:
                 type:
                   type: string
                   description: ''
-                  example: et
+                  example: maiores
                 file:
                   type: string
                   format: binary
                   description: 'Must be an image. Must not be greater than 5120 kilobytes.'
               required:
                 - type
-      security: []
   /v1/upload-to-ipfs:
     post:
       summary: ''
@@ -555,7 +539,6 @@ paths:
                   type: string
                   format: binary
                   description: 'Must be an image. Must not be greater than 5120 kilobytes.'
-      security: []
 tags:
   -
     name: Endpoints
@@ -563,3 +546,12 @@ tags:
   -
     name: Global
     description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: ''
+security:
+  -
+    default: []
