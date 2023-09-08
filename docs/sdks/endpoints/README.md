@@ -27,7 +27,11 @@
 import { GlobalTest2 } from "global-test2";
 import { DeleteV1CustomersCustomerIdResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.deleteV1CustomersCustomerId({
   customerId: "provident",
@@ -59,7 +63,11 @@ sdk.endpoints.deleteV1CustomersCustomerId({
 import { GlobalTest2 } from "global-test2";
 import { GetV1CustomersCustomerIdResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.getV1CustomersCustomerId({
   customerId: "distinctio",
@@ -91,7 +99,11 @@ sdk.endpoints.getV1CustomersCustomerId({
 import { GlobalTest2 } from "global-test2";
 import { GetV1ProjectsProjectIdCustomersResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.getV1ProjectsProjectIdCustomers({
   projectId: "quibusdam",
@@ -123,7 +135,11 @@ sdk.endpoints.getV1ProjectsProjectIdCustomers({
 import { GlobalTest2 } from "global-test2";
 import { GetV1ProjectsProjectIdTransactionsPendingSignaturesResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.getV1ProjectsProjectIdTransactionsPendingSignatures({
   projectId: "unde",
@@ -155,7 +171,11 @@ sdk.endpoints.getV1ProjectsProjectIdTransactionsPendingSignatures({
 import { GlobalTest2 } from "global-test2";
 import { GetV1TemplatesTemplateIdPlaygroundFunctionsResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.getV1TemplatesTemplateIdPlaygroundFunctions({
   templateId: "nulla",
@@ -187,7 +207,11 @@ sdk.endpoints.getV1TemplatesTemplateIdPlaygroundFunctions({
 import { GlobalTest2 } from "global-test2";
 import { GetV1TemplatesTemplateIdTransactionsResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.getV1TemplatesTemplateIdTransactions({
   templateId: "corrupti",
@@ -219,7 +243,11 @@ sdk.endpoints.getV1TemplatesTemplateIdTransactions({
 import { GlobalTest2 } from "global-test2";
 import { GetV1TransactionsTransactionIdResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.getV1TransactionsTransactionId({
   transactionId: "illum",
@@ -251,11 +279,15 @@ sdk.endpoints.getV1TransactionsTransactionId({
 import { GlobalTest2 } from "global-test2";
 import { PostV1TemplatesTemplateIdPlaygroundFunctionsFunctionNameResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.postV1TemplatesTemplateIdPlaygroundFunctionsFunctionName({
   requestBody: {
-    functionName: "necessitatibus",
+    functionName: "accusantium",
   },
   functionName: "vel",
   templateId: "error",
@@ -287,11 +319,15 @@ sdk.endpoints.postV1TemplatesTemplateIdPlaygroundFunctionsFunctionName({
 import { GlobalTest2 } from "global-test2";
 import { PostV1TemplatesTemplateIdPlaygroundReadFunctionNameResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.postV1TemplatesTemplateIdPlaygroundReadFunctionName({
   requestBody: {
-    functionName: "at",
+    functionName: "saepe",
   },
   functionName: "deserunt",
   templateId: "suscipit",
@@ -323,11 +359,15 @@ sdk.endpoints.postV1TemplatesTemplateIdPlaygroundReadFunctionName({
 import { GlobalTest2 } from "global-test2";
 import { PostV1TemplatesTemplateIdPlaygroundTransactionsPayloadFunctionNameResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.postV1TemplatesTemplateIdPlaygroundTransactionsPayloadFunctionName({
   requestBody: {
-    functionName: "facilis",
+    functionName: "et",
   },
   functionName: "iure",
   templateId: "magnam",
@@ -359,11 +399,15 @@ sdk.endpoints.postV1TemplatesTemplateIdPlaygroundTransactionsPayloadFunctionName
 import { GlobalTest2 } from "global-test2";
 import { PostV1TemplatesTemplateIdPlaygroundTransactionsSignProcessFunctionNameResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.postV1TemplatesTemplateIdPlaygroundTransactionsSignProcessFunctionName({
   requestBody: {
-    functionName: "ut",
+    functionName: "qui",
   },
   functionName: "debitis",
   templateId: "ipsa",
@@ -395,7 +439,11 @@ sdk.endpoints.postV1TemplatesTemplateIdPlaygroundTransactionsSignProcessFunction
 import { GlobalTest2 } from "global-test2";
 import { PostV1TransactionsTransactionIdCancelResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.postV1TransactionsTransactionIdCancel({
   transactionId: "delectus",
@@ -427,7 +475,11 @@ sdk.endpoints.postV1TransactionsTransactionIdCancel({
 import { GlobalTest2 } from "global-test2";
 import { PostV1TransactionsTransactionIdPrepareResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.postV1TransactionsTransactionIdPrepare({
   transactionId: "tempora",
@@ -459,7 +511,11 @@ sdk.endpoints.postV1TransactionsTransactionIdPrepare({
 import { GlobalTest2 } from "global-test2";
 import { PostV1UploadToIpfsResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.postV1UploadToIpfs({
   file: {
@@ -494,14 +550,18 @@ sdk.endpoints.postV1UploadToIpfs({
 import { GlobalTest2 } from "global-test2";
 import { PostV1UploadsResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.postV1Uploads({
   file: {
     content: "minus".encode(),
     file: "placeat",
   },
-  type: "et",
+  type: "maiores",
 }).then((res: PostV1UploadsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -530,13 +590,17 @@ sdk.endpoints.postV1Uploads({
 import { GlobalTest2 } from "global-test2";
 import { PutV1CustomersCustomerIdResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.endpoints.putV1CustomersCustomerId({
   requestBody: {
-    customIdentifier: "zmm",
-    email: "ritchie.bernie@example.net",
-    name: "bcbtvnkuhm",
+    customIdentifier: "gxmce",
+    email: "anastasia.torphy@example.org",
+    name: "ctqzrn",
     thumb: {
       content: "voluptatum".encode(),
       thumb: "iusto",

@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 management:
-  docChecksum: a19850828876682b5fa49592582b46f5
+  docChecksum: 438b8d6a86092a845272e47fef35a051
   docVersion: 1.0.0
   speakeasyVersion: 1.82.2
   generationVersion: 2.107.3
@@ -15,9 +15,10 @@ generation:
 features:
   typescript:
     core: 2.87.1
+    globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
 typescript:
-  version: 0.1.0
+  version: 0.1.1
   author: L-Test
   clientServerStatusCodesAsErrors: true
   maxMethodParams: 0

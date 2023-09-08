@@ -14,16 +14,20 @@ Add a new customer to the project
 import { GlobalTest2 } from "global-test2";
 import { NewCustomerResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2();
+const sdk = new GlobalTest2({
+  security: {
+    default: "",
+  },
+});
 
 sdk.global.newCustomer({
   requestBody: {
-    customIdentifier: "natus",
-    email: "barton.janet@example.net",
+    customIdentifier: "mollitia",
+    email: "america.lang@example.net",
     metadata: [
       {},
     ],
-    name: "deserunt",
+    name: "vero",
     thumb: {
       content: "nisi".encode(),
       thumb: "recusandae",

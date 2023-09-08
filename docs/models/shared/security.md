@@ -1,8 +1,8 @@
-# PostV1TemplatesTemplateIdPlaygroundReadFunctionNameRequestBody
+# Security
 
 
 ## Fields
 
 | Field              | Type               | Required           | Description        | Example            |
 | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| `functionName`     | *string*           | :heavy_check_mark: | N/A                | saepe              |
+| `default`          | *string*           | :heavy_check_mark: | N/A                |                    |

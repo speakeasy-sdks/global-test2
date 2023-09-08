@@ -40,6 +40,8 @@ src/sdk/models/operations/newcustomer.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/errors/newcustomer.ts
 src/sdk/models/errors/index.ts
+src/sdk/models/shared/security.ts
+src/sdk/models/shared/index.ts
 docs/sdks/globaltest2/README.md
 docs/sdks/endpoints/README.md
 docs/sdks/global/README.md
@@ -92,4 +94,5 @@ docs/models/operations/newcustomer200applicationjsonmetadata.md
 docs/models/operations/newcustomer200applicationjson.md
 docs/models/operations/newcustomerresponse.md
 docs/models/errors/newcustomer400applicationjson.md
+docs/models/shared/security.md
 .gitattributes
