@@ -1,0 +1,565 @@
+openapi: 3.0.3
+info:
+  title: legit-core
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://legit.test:8000'
+paths:
+  '/v1/projects/{project_id}/customers':
+    get:
+      summary: ''
+      operationId: getV1ProjectsProject_idCustomers
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'New Customer'
+      operationId: newCustomer
+      description: 'Add a new customer to the project'
+      parameters: []
+      responses:
+        200:
+          description: 'Customer created successfully!'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 9a136d5c-9336-4468-a85c-0e7863fc4c9c
+                  name: Subhadeep
+                  email: subhadeep+4@legit.is
+                  thumb: null
+                  wallet_connection: LEGIT_WALLET
+                  address: '0x882e1C37B6D38258E21938561355ae513c9B365e'
+                  custom_identifier: '12345678903'
+                  metadata:
+                    -
+                      key: key1
+                      value: value1
+                    -
+                      key: key2
+                      value: value2
+                  project_id: 99bb9d65-fb51-41b2-8cb2-21bcf680eb1b
+                  created_at: '2023-09-07T10:24:58.000000Z'
+                  updated_at: '2023-09-07T10:25:03.000000Z'
+                  deleted_at: null
+                properties:
+                  id:
+                    type: string
+                    example: 9a136d5c-9336-4468-a85c-0e7863fc4c9c
+                  name:
+                    type: string
+                    example: Subhadeep
+                    description: 'The Name of the customer.'
+                  email:
+                    type: string
+                    example: subhadeep+4@legit.is
+                    description: 'The Email of the customer.'
+                  thumb:
+                    type: string
+                    example: null
+                    description: 'The Avatar of the customer.'
+                  wallet_connection:
+                    type: string
+                    example: LEGIT_WALLET
+                    description: 'The wallet connection type of the customer.'
+                  address:
+                    type: string
+                    example: '0x882e1C37B6D38258E21938561355ae513c9B365e'
+                    description: 'The wallet address of the customer.'
+                  custom_identifier:
+                    type: string
+                    example: '12345678903'
+                    description: 'The Custom Identifier of the customer in the organization.'
+                  metadata:
+                    type: array
+                    example:
+                      -
+                        key: key1
+                        value: value1
+                      -
+                        key: key2
+                        value: value2
+                    description: 'Metadata information.'
+                    items:
+                      type: object
+                      properties:
+                        key:
+                          type: string
+                          example: key1
+                        value:
+                          type: string
+                          example: value1
+                  project_id:
+                    type: string
+                    example: 99bb9d65-fb51-41b2-8cb2-21bcf680eb1b
+                  created_at:
+                    type: string
+                    example: '2023-09-07T10:24:58.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2023-09-07T10:25:03.000000Z'
+                  deleted_at:
+                    type: string
+                    example: null
+        400:
+          description: Unauthenticated!
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status_code: 401
+                  error_code: ERR401
+                  message: 'Unauthorized to access this resource(s)'
+                  data: Unauthenticated.
+                properties:
+                  status_code:
+                    type: integer
+                    example: 401
+                  error_code:
+                    type: string
+                    example: ERR401
+                  message:
+                    type: string
+                    example: 'Unauthorized to access this resource(s)'
+                    description: 'Metadata information.'
+                  data:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Global
+      requestBody:
+        required: false
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'The Name of the customer.'
+                  example: deserunt
+                custom_identifier:
+                  type: string
+                  description: 'The Custom Identifier of the customer in the organization.'
+                  example: natus
+                email:
+                  type: string
+                  description: 'The Email of the customer.'
+                  example: barton.janet@example.net
+                thumb:
+                  type: string
+                  format: binary
+                  description: 'The Avatar of the customer.'
+                metadata:
+                  type: array
+                  description: 'Customer information as Key-Value pair.'
+                  example:
+                    - []
+                  items:
+                    type: object
+      security: []
+    parameters:
+      -
+        in: path
+        name: project_id
+        description: 'The ID of the project.'
+        example: esse
+        required: true
+        schema:
+          type: string
+  '/v1/customers/{customer_id}':
+    get:
+      summary: ''
+      operationId: getV1CustomersCustomer_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      operationId: putV1CustomersCustomer_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must be at least 1 character. Must not be greater than 32 characters.'
+                  example: bcbtvnkuhm
+                custom_identifier:
+                  type: string
+                  description: 'Must be at least 1 character. Must not be greater than 255 characters.'
+                  example: zmm
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: ritchie.bernie@example.net
+                thumb:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 5120 kilobytes.'
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteV1CustomersCustomer_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: customer_id
+        description: 'The ID of the customer.'
+        example: cum
+        required: true
+        schema:
+          type: string
+  '/v1/templates/{template_id}/playground/functions':
+    get:
+      summary: ''
+      operationId: getV1TemplatesTemplate_idPlaygroundFunctions
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: template_id
+        description: 'The ID of the template.'
+        example: placeat
+        required: true
+        schema:
+          type: string
+  '/v1/templates/{template_id}/playground/functions/{function_name}':
+    post:
+      summary: ''
+      operationId: postV1TemplatesTemplate_idPlaygroundFunctionsFunction_name
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                function_name:
+                  type: string
+                  description: ''
+                  example: necessitatibus
+              required:
+                - function_name
+      security: []
+    parameters:
+      -
+        in: path
+        name: template_id
+        description: 'The ID of the template.'
+        example: quae
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: function_name
+        description: ''
+        example: et
+        required: true
+        schema:
+          type: string
+  '/v1/templates/{template_id}/playground/read/{function_name}':
+    post:
+      summary: ''
+      operationId: postV1TemplatesTemplate_idPlaygroundReadFunction_name
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                function_name:
+                  type: string
+                  description: ''
+                  example: at
+              required:
+                - function_name
+      security: []
+    parameters:
+      -
+        in: path
+        name: template_id
+        description: 'The ID of the template.'
+        example: placeat
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: function_name
+        description: ''
+        example: ut
+        required: true
+        schema:
+          type: string
+  '/v1/templates/{template_id}/playground/transactions/payload/{function_name}':
+    post:
+      summary: ''
+      operationId: postV1TemplatesTemplate_idPlaygroundTransactionsPayloadFunction_name
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                function_name:
+                  type: string
+                  description: ''
+                  example: facilis
+              required:
+                - function_name
+      security: []
+    parameters:
+      -
+        in: path
+        name: template_id
+        description: 'The ID of the template.'
+        example: odio
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: function_name
+        description: ''
+        example: asperiores
+        required: true
+        schema:
+          type: string
+  '/v1/templates/{template_id}/playground/transactions/sign-process/{function_name}':
+    post:
+      summary: ''
+      operationId: postV1TemplatesTemplate_idPlaygroundTransactionsSignProcessFunction_name
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                function_name:
+                  type: string
+                  description: ''
+                  example: ut
+              required:
+                - function_name
+      security: []
+    parameters:
+      -
+        in: path
+        name: template_id
+        description: 'The ID of the template.'
+        example: et
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: function_name
+        description: ''
+        example: occaecati
+        required: true
+        schema:
+          type: string
+  '/v1/templates/{template_id}/transactions':
+    get:
+      summary: ''
+      operationId: getV1TemplatesTemplate_idTransactions
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: template_id
+        description: 'The ID of the template.'
+        example: vitae
+        required: true
+        schema:
+          type: string
+  '/v1/projects/{project_id}/transactions/pending-signatures':
+    get:
+      summary: ''
+      operationId: getV1ProjectsProject_idTransactionsPendingSignatures
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: project_id
+        description: 'The ID of the project.'
+        example: ullam
+        required: true
+        schema:
+          type: string
+  '/v1/transactions/{transaction_id}':
+    get:
+      summary: ''
+      operationId: getV1TransactionsTransaction_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: transaction_id
+        description: 'The ID of the transaction.'
+        example: libero
+        required: true
+        schema:
+          type: string
+  '/v1/transactions/{transaction_id}/cancel':
+    post:
+      summary: ''
+      operationId: postV1TransactionsTransaction_idCancel
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: transaction_id
+        description: 'The ID of the transaction.'
+        example: omnis
+        required: true
+        schema:
+          type: string
+  '/v1/transactions/{transaction_id}/prepare':
+    post:
+      summary: ''
+      operationId: postV1TransactionsTransaction_idPrepare
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: transaction_id
+        description: 'The ID of the transaction.'
+        example: iste
+        required: true
+        schema:
+          type: string
+  /v1/uploads:
+    post:
+      summary: ''
+      operationId: postV1Uploads
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: ''
+                  example: et
+                file:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 5120 kilobytes.'
+              required:
+                - type
+      security: []
+  /v1/upload-to-ipfs:
+    post:
+      summary: ''
+      operationId: postV1UploadToIpfs
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 5120 kilobytes.'
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: Global
+    description: ''
