@@ -287,7 +287,7 @@ const sdk = new GlobalTest2({
 
 sdk.endpoints.postV1TemplatesTemplateIdPlaygroundFunctionsFunctionName({
   requestBody: {
-    functionName: "accusantium",
+    functionName: "sed",
   },
   functionName: "vel",
   templateId: "error",
@@ -327,7 +327,7 @@ const sdk = new GlobalTest2({
 
 sdk.endpoints.postV1TemplatesTemplateIdPlaygroundReadFunctionName({
   requestBody: {
-    functionName: "saepe",
+    functionName: "illo",
   },
   functionName: "deserunt",
   templateId: "suscipit",
@@ -367,7 +367,7 @@ const sdk = new GlobalTest2({
 
 sdk.endpoints.postV1TemplatesTemplateIdPlaygroundTransactionsPayloadFunctionName({
   requestBody: {
-    functionName: "et",
+    functionName: "soluta",
   },
   functionName: "iure",
   templateId: "magnam",
@@ -407,7 +407,7 @@ const sdk = new GlobalTest2({
 
 sdk.endpoints.postV1TemplatesTemplateIdPlaygroundTransactionsSignProcessFunctionName({
   requestBody: {
-    functionName: "qui",
+    functionName: "vel",
   },
   functionName: "debitis",
   templateId: "ipsa",
@@ -561,7 +561,7 @@ sdk.endpoints.postV1Uploads({
     content: "minus".encode(),
     file: "placeat",
   },
-  type: "maiores",
+  type: "pariatur",
 }).then((res: PostV1UploadsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -598,9 +598,9 @@ const sdk = new GlobalTest2({
 
 sdk.endpoints.putV1CustomersCustomerId({
   requestBody: {
-    customIdentifier: "gxmce",
-    email: "anastasia.torphy@example.org",
-    name: "ctqzrn",
+    customIdentifier: "zvhfprn",
+    email: "destiny.willms@example.org",
+    name: "gcudbzsnhvzvbhj",
     thumb: {
       content: "voluptatum".encode(),
       thumb: "iusto",

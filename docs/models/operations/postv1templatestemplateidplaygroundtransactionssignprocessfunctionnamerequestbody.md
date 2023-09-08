@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        | Example            |
 | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| `functionName`     | *string*           | :heavy_check_mark: | N/A                | qui                |
+| `functionName`     | *string*           | :heavy_check_mark: | N/A                | vel                |
