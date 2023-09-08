@@ -1,0 +1,9 @@
+# PutV1CustomersCustomerIdRequest
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `requestBody`                                                                                         | [PutV1CustomersCustomerIdRequestBody](../../models/operations/putv1customerscustomeridrequestbody.md) | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `customerId`                                                                                          | *string*                                                                                              | :heavy_check_mark:                                                                                    | The ID of the customer.                                                                               |
