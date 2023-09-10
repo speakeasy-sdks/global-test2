@@ -22,12 +22,12 @@ const sdk = new GlobalTest2({
 
 sdk.global.newCustomer({
   requestBody: {
-    customIdentifier: "mollitia",
-    email: "america.lang@example.net",
+    customIdentifier: "est",
+    email: "dhegmann@example.org",
     metadata: [
       {},
     ],
-    name: "vero",
+    name: "iste",
     thumb: {
       content: "nisi".encode(),
       thumb: "recusandae",

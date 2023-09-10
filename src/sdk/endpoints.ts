@@ -30,15 +30,7 @@ export class Endpoints {
         );
         const url: string = utils.generateURL(baseURL, "/v1/customers/{customer_id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -94,15 +86,7 @@ export class Endpoints {
         );
         const url: string = utils.generateURL(baseURL, "/v1/customers/{customer_id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -158,15 +142,7 @@ export class Endpoints {
         );
         const url: string = utils.generateURL(baseURL, "/v1/projects/{project_id}/customers", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -226,15 +202,7 @@ export class Endpoints {
             req
         );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -294,15 +262,7 @@ export class Endpoints {
             req
         );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -362,15 +322,7 @@ export class Endpoints {
             req
         );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -426,15 +378,7 @@ export class Endpoints {
         );
         const url: string = utils.generateURL(baseURL, "/v1/transactions/{transaction_id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -506,15 +450,7 @@ export class Endpoints {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers = { ...reqBodyHeaders, ...config?.headers };
         if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
         headers["Accept"] = "*/*";
@@ -587,15 +523,7 @@ export class Endpoints {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers = { ...reqBodyHeaders, ...config?.headers };
         if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
         headers["Accept"] = "*/*";
@@ -671,15 +599,7 @@ export class Endpoints {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers = { ...reqBodyHeaders, ...config?.headers };
         if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
         headers["Accept"] = "*/*";
@@ -757,15 +677,7 @@ export class Endpoints {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers = { ...reqBodyHeaders, ...config?.headers };
         if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
         headers["Accept"] = "*/*";
@@ -830,15 +742,7 @@ export class Endpoints {
             req
         );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -898,15 +802,7 @@ export class Endpoints {
             req
         );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...config?.headers, ...properties.headers };
+        const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -972,15 +868,7 @@ export class Endpoints {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -1047,15 +935,7 @@ export class Endpoints {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers = { ...reqBodyHeaders, ...config?.headers };
         if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
         headers["Accept"] = "*/*";
@@ -1123,15 +1003,7 @@ export class Endpoints {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
+        const headers = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
