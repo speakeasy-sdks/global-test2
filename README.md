@@ -28,17 +28,20 @@ yarn add https://github.com/speakeasy-sdks/global-test2
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { DeleteV1CustomersCustomerIdResponse } from "global-test2/dist/sdk/models/operations";
+import { UpdateProjectResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
+const sdk = new GlobalTest2();
+
+sdk.projects.updateProject({
+  requestBody: {
+    customIdentifier: "The Custom Identifier of the customer in the organization",
+    email: "The Email of the customer.",
+    metadata: {},
+    name: "The Name of the customer.",
+    thumb: "The Avatar of the customer.",
   },
-});
-
-sdk.endpoints.deleteV1CustomersCustomerId({
-  customerId: "corrupti",
-}).then((res: DeleteV1CustomersCustomerIdResponse) => {
+  id: 548814,
+}).then((res: UpdateProjectResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -50,28 +53,9 @@ sdk.endpoints.deleteV1CustomersCustomerId({
 ## Available Resources and Operations
 
 
-### [endpoints](docs/sdks/endpoints/README.md)
+### [projects](docs/sdks/projects/README.md)
 
-* [deleteV1CustomersCustomerId](docs/sdks/endpoints/README.md#deletev1customerscustomerid)
-* [getV1CustomersCustomerId](docs/sdks/endpoints/README.md#getv1customerscustomerid)
-* [getV1ProjectsProjectIdCustomers](docs/sdks/endpoints/README.md#getv1projectsprojectidcustomers)
-* [getV1ProjectsProjectIdTransactionsPendingSignatures](docs/sdks/endpoints/README.md#getv1projectsprojectidtransactionspendingsignatures)
-* [getV1TemplatesTemplateIdPlaygroundFunctions](docs/sdks/endpoints/README.md#getv1templatestemplateidplaygroundfunctions)
-* [getV1TemplatesTemplateIdTransactions](docs/sdks/endpoints/README.md#getv1templatestemplateidtransactions)
-* [getV1TransactionsTransactionId](docs/sdks/endpoints/README.md#getv1transactionstransactionid)
-* [postV1TemplatesTemplateIdPlaygroundFunctionsFunctionName](docs/sdks/endpoints/README.md#postv1templatestemplateidplaygroundfunctionsfunctionname)
-* [postV1TemplatesTemplateIdPlaygroundReadFunctionName](docs/sdks/endpoints/README.md#postv1templatestemplateidplaygroundreadfunctionname)
-* [postV1TemplatesTemplateIdPlaygroundTransactionsPayloadFunctionName](docs/sdks/endpoints/README.md#postv1templatestemplateidplaygroundtransactionspayloadfunctionname)
-* [postV1TemplatesTemplateIdPlaygroundTransactionsSignProcessFunctionName](docs/sdks/endpoints/README.md#postv1templatestemplateidplaygroundtransactionssignprocessfunctionname)
-* [postV1TransactionsTransactionIdCancel](docs/sdks/endpoints/README.md#postv1transactionstransactionidcancel)
-* [postV1TransactionsTransactionIdPrepare](docs/sdks/endpoints/README.md#postv1transactionstransactionidprepare)
-* [postV1UploadToIpfs](docs/sdks/endpoints/README.md#postv1uploadtoipfs)
-* [postV1Uploads](docs/sdks/endpoints/README.md#postv1uploads)
-* [putV1CustomersCustomerId](docs/sdks/endpoints/README.md#putv1customerscustomerid)
-
-### [global](docs/sdks/global/README.md)
-
-* [newCustomer](docs/sdks/global/README.md#newcustomer) - New Customer
+* [updateProject](docs/sdks/projects/README.md#updateproject) - Update existing project
 <!-- End SDK Available Operations -->
 
 ### Maturity

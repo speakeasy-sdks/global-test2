@@ -1,9 +1,0 @@
-# PostV1UploadsRequestBody
-
-
-## Fields
-
-| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             | Example                                                                                 |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `file`                                                                                  | [PostV1UploadsRequestBodyFile](../../models/operations/postv1uploadsrequestbodyfile.md) | :heavy_minus_sign:                                                                      | Must be an image. Must not be greater than 5120 kilobytes.                              |                                                                                         |
-| `type`                                                                                  | *string*                                                                                | :heavy_check_mark:                                                                      | N/A                                                                                     | maiores                                                                                 |

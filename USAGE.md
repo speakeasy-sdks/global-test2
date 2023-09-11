@@ -3,17 +3,20 @@
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { DeleteV1CustomersCustomerIdResponse } from "global-test2/dist/sdk/models/operations";
+import { UpdateProjectResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
+const sdk = new GlobalTest2();
+
+sdk.projects.updateProject({
+  requestBody: {
+    customIdentifier: "The Custom Identifier of the customer in the organization",
+    email: "The Email of the customer.",
+    metadata: {},
+    name: "The Name of the customer.",
+    thumb: "The Avatar of the customer.",
   },
-});
-
-sdk.endpoints.deleteV1CustomersCustomerId({
-  customerId: "corrupti",
-}).then((res: DeleteV1CustomersCustomerIdResponse) => {
+  id: 548814,
+}).then((res: UpdateProjectResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

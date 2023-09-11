@@ -3,25 +3,24 @@
  */
 
 import * as utils from "../internal/utils";
-import { Endpoints } from "./endpoints";
-import { Global } from "./global";
-import * as shared from "./models/shared";
+import { Projects } from "./projects";
 import axios from "axios";
 import { AxiosInstance } from "axios";
 
 /**
  * Contains the list of servers available to the SDK
  */
-export const ServerList = ["http://legit.test:8000"] as const;
+export const ServerList = [
+    /**
+     * Demo API Server
+     */
+    "http://my-default-host.com",
+] as const;
 
 /**
  * The available configuration options for the SDK
  */
 export type SDKProps = {
-    /**
-     * The security details required to authenticate the SDK
-     */
-    security?: shared.Security | (() => Promise<shared.Security>);
     /**
      * Allows overriding the default axios client used by the SDK
      */
@@ -44,12 +43,11 @@ export type SDKProps = {
 
 export class SDKConfiguration {
     defaultClient: AxiosInstance;
-    security?: shared.Security | (() => Promise<shared.Security>);
     serverURL: string;
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "0.1.1";
+    sdkVersion = "0.1.2";
     genVersion = "2.107.3";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
@@ -57,9 +55,14 @@ export class SDKConfiguration {
     }
 }
 
+/**
+ * Laravel OpenApi Demo Documentation: L5 Swagger OpenApi description
+ */
 export class GlobalTest2 {
-    public endpoints: Endpoints;
-    public global: Global;
+    /**
+     * API Endpoints of Projects
+     */
+    public projects: Projects;
 
     private sdkConfiguration: SDKConfiguration;
 
@@ -74,12 +77,10 @@ export class GlobalTest2 {
         const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
-            security: props?.security,
             serverURL: serverURL,
             retryConfig: props?.retryConfig,
         });
 
-        this.endpoints = new Endpoints(this.sdkConfiguration);
-        this.global = new Global(this.sdkConfiguration);
+        this.projects = new Projects(this.sdkConfiguration);
     }
 }
