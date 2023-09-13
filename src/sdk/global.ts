@@ -5,14 +5,11 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
-/**
- * API Endpoints of Projects
- */
-
-export class Projects {
+export class Global {
     private sdkConfiguration: SDKConfiguration;
 
     constructor(sdkConfig: SDKConfiguration) {
@@ -20,42 +17,48 @@ export class Projects {
     }
 
     /**
-     * Update existing project
+     * New Customer
      *
      * @remarks
-     * Returns updated project data
+     * Add a new customer to the project
      */
-    async updateProject(
-        req: operations.UpdateProjectRequest,
+    async newCustomer(
+        req: operations.NewCustomerRequest,
         config?: AxiosRequestConfig
-    ): Promise<operations.UpdateProjectResponse> {
+    ): Promise<operations.NewCustomerResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.UpdateProjectRequest(req);
+            req = new operations.NewCustomerRequest(req);
         }
 
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/projects/{id}", req);
+        const url: string = utils.generateURL(
+            baseURL,
+            "/v1/projects/{project_id}/customers/post",
+            req
+        );
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
         try {
-            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "requestBody", "json");
+            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "requestBody", "multipart");
         } catch (e: unknown) {
             if (e instanceof Error) {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = {
-            ...utils.getHeadersFromRequest(req),
-            ...reqBodyHeaders,
-            ...config?.headers,
-        };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -65,7 +68,7 @@ export class Projects {
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
             url: url,
-            method: "put",
+            method: "post",
             headers: headers,
             responseType: "arraybuffer",
             data: reqBody,
@@ -78,7 +81,7 @@ export class Projects {
             throw new Error(`status code not found in response: ${httpRes}`);
         }
 
-        const res: operations.UpdateProjectResponse = new operations.UpdateProjectResponse({
+        const res: operations.NewCustomerResponse = new operations.NewCustomerResponse({
             statusCode: httpRes.status,
             contentType: contentType,
             rawResponse: httpRes,
@@ -87,9 +90,9 @@ export class Projects {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.updateProject200ApplicationJSONObject = utils.objectToClass(
+                    res.newCustomer200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.UpdateProject200ApplicationJSON
+                        operations.NewCustomer200ApplicationJSON
                     );
                 } else {
                     throw new errors.SDKError(
@@ -100,13 +103,24 @@ export class Projects {
                     );
                 }
                 break;
-            case httpRes?.status == 202:
+            case httpRes?.status == 400:
+                if (utils.matchContentType(contentType, `application/json`)) {
+                    const err = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        errors.NewCustomer400ApplicationJSON
+                    );
+                    err.rawResponse = httpRes;
+                    throw new errors.NewCustomer400ApplicationJSON(err);
+                } else {
+                    throw new errors.SDKError(
+                        "unknown content-type received: " + contentType,
+                        httpRes.status,
+                        decodedRes,
+                        httpRes
+                    );
+                }
                 break;
-            case httpRes?.status == 400 ||
-                httpRes?.status == 401 ||
-                httpRes?.status == 403 ||
-                httpRes?.status == 404 ||
-                (httpRes?.status >= 400 && httpRes?.status < 500) ||
+            case (httpRes?.status >= 400 && httpRes?.status < 500) ||
                 (httpRes?.status >= 500 && httpRes?.status < 600):
                 throw new errors.SDKError(
                     "API error occurred",
