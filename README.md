@@ -62,7 +62,7 @@ sdk.global.newCustomer({
 ## Available Resources and Operations
 
 
-### [global](docs/sdks/global/README.md)
+### [Global](docs/sdks/global/README.md)
 
 * [newCustomer](docs/sdks/global/README.md#newcustomer) - New Customer
 <!-- End SDK Available Operations -->
