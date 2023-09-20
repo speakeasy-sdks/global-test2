@@ -3,7 +3,7 @@
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { NewCustomerResponse } from "global-test2/dist/sdk/models/operations";
+import { DeleteCustomerResponse } from "global-test2/dist/sdk/models/operations";
 
 const sdk = new GlobalTest2({
   security: {
@@ -11,21 +11,9 @@ const sdk = new GlobalTest2({
   },
 });
 
-sdk.global.newCustomer({
-  requestBody: {
-    customIdentifier: "iusto",
-    email: "anya24@example.org",
-    metadata: [
-      {},
-    ],
-    name: "commodi",
-    thumb: {
-      content: "corrupti".encode(),
-      thumb: "provident",
-    },
-  },
-  projectId: "distinctio",
-}).then((res: NewCustomerResponse) => {
+sdk.customers.deleteCustomer({
+  customer: "corrupti",
+}).then((res: DeleteCustomerResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

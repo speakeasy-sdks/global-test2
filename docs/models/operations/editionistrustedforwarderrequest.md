@@ -1,0 +1,9 @@
+# EditionIsTrustedForwarderRequest
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `requestBody`                                                                                           | [EditionIsTrustedForwarderRequestBody](../../models/operations/editionistrustedforwarderrequestbody.md) | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |
+| `template`                                                                                              | *string*                                                                                                | :heavy_check_mark:                                                                                      | Template id                                                                                             |

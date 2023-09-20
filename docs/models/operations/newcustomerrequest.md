@@ -3,7 +3,7 @@
 
 ## Fields
 
-| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `requestBody`                                                               | [NewCustomerRequestBody](../../models/operations/newcustomerrequestbody.md) | :heavy_minus_sign:                                                          | N/A                                                                         |
-| `projectId`                                                                 | *string*                                                                    | :heavy_check_mark:                                                          | Optional parameter. The ID of the project                                   |
+| Field                                                          | Type                                                           | Required                                                       | Description                                                    |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| `createCustomer`                                               | [shared.CreateCustomer](../../models/shared/createcustomer.md) | :heavy_check_mark:                                             | N/A                                                            |
+| `project`                                                      | *string*                                                       | :heavy_check_mark:                                             | Project id                                                     |

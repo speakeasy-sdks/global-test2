@@ -1,0 +1,9 @@
+# EditionSetPlatformFeeTypeRequest
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `requestBody`                                                                                           | [EditionSetPlatformFeeTypeRequestBody](../../models/operations/editionsetplatformfeetyperequestbody.md) | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |
+| `template`                                                                                              | *string*                                                                                                | :heavy_check_mark:                                                                                      | Template id                                                                                             |

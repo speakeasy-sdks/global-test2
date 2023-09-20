@@ -3,15 +3,23 @@
  */
 
 import * as utils from "../internal/utils";
-import { Global } from "./global";
+import { Customers } from "./customers";
+import { FunctionsRead } from "./functionsread";
+import { FunctionsWrite } from "./functionswrite";
 import * as shared from "./models/shared";
+import { NFTs } from "./nfts";
 import axios from "axios";
 import { AxiosInstance } from "axios";
 
 /**
  * Contains the list of servers available to the SDK
  */
-export const ServerList = ["http://legit.test:8000"] as const;
+export const ServerList = [
+    /**
+     * Legit API Core Server
+     */
+    "http://legit.test:8000/v1",
+] as const;
 
 /**
  * The available configuration options for the SDK
@@ -48,7 +56,7 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "0.1.5";
+    sdkVersion = "0.1.6";
     genVersion = "2.118.1";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
@@ -56,8 +64,26 @@ export class SDKConfiguration {
     }
 }
 
+/**
+ * Legit OpenApi Documentation: Legit OpenApi Documentation
+ */
 export class GlobalTest2 {
-    public global: Global;
+    /**
+     * API Endpoints of Customers
+     */
+    public customers: Customers;
+    /**
+     * All Edition's Read functions
+     */
+    public functionsRead: FunctionsRead;
+    /**
+     * All Edition's Write functions
+     */
+    public functionsWrite: FunctionsWrite;
+    /**
+     * API Endpoints of NFTs
+     */
+    public nfTs: NFTs;
 
     private sdkConfiguration: SDKConfiguration;
 
@@ -77,6 +103,9 @@ export class GlobalTest2 {
             retryConfig: props?.retryConfig,
         });
 
-        this.global = new Global(this.sdkConfiguration);
+        this.customers = new Customers(this.sdkConfiguration);
+        this.functionsRead = new FunctionsRead(this.sdkConfiguration);
+        this.functionsWrite = new FunctionsWrite(this.sdkConfiguration);
+        this.nfTs = new NFTs(this.sdkConfiguration);
     }
 }

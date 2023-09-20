@@ -28,7 +28,7 @@ yarn add https://github.com/speakeasy-sdks/global-test2
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { NewCustomerResponse } from "global-test2/dist/sdk/models/operations";
+import { DeleteCustomerResponse } from "global-test2/dist/sdk/models/operations";
 
 const sdk = new GlobalTest2({
   security: {
@@ -36,21 +36,9 @@ const sdk = new GlobalTest2({
   },
 });
 
-sdk.global.newCustomer({
-  requestBody: {
-    customIdentifier: "iusto",
-    email: "anya24@example.org",
-    metadata: [
-      {},
-    ],
-    name: "commodi",
-    thumb: {
-      content: "corrupti".encode(),
-      thumb: "provident",
-    },
-  },
-  projectId: "distinctio",
-}).then((res: NewCustomerResponse) => {
+sdk.customers.deleteCustomer({
+  customer: "corrupti",
+}).then((res: DeleteCustomerResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -62,9 +50,76 @@ sdk.global.newCustomer({
 ## Available Resources and Operations
 
 
-### [Global](docs/sdks/global/README.md)
+### [Customers](docs/sdks/customers/README.md)
 
-* [newCustomer](docs/sdks/global/README.md#newcustomer) - New Customer
+* [deleteCustomer](docs/sdks/customers/README.md#deletecustomer) - Delete Customer
+* [getCustomer](docs/sdks/customers/README.md#getcustomer) - View Customer
+* [getProjectCustomers](docs/sdks/customers/README.md#getprojectcustomers) - List all Customers
+* [newCustomer](docs/sdks/customers/README.md#newcustomer) - Add a Customer
+* [updateCustomer](docs/sdks/customers/README.md#updatecustomer) - Update Customer
+
+### [FunctionsRead](docs/sdks/functionsread/README.md)
+
+* [editionDEFAULTADMINROLE](docs/sdks/functionsread/README.md#editiondefaultadminrole) - Default Admin Role
+* [editionBalanceOf](docs/sdks/functionsread/README.md#editionbalanceof) - Balance of
+* [editionBalanceOfBatch](docs/sdks/functionsread/README.md#editionbalanceofbatch) - Balance of multiple accounts
+* [editionContractURI](docs/sdks/functionsread/README.md#editioncontracturi) - Contract URI	
+* [editionContractVersion](docs/sdks/functionsread/README.md#editioncontractversion)
+* [editionGetDefaultRoyaltyInfo](docs/sdks/functionsread/README.md#editiongetdefaultroyaltyinfo) - Get Default Royalty Info	
+* [editionGetFlatPlatformFeeInfo](docs/sdks/functionsread/README.md#editiongetflatplatformfeeinfo) - Flat platform fee information	
+* [editionGetPlatformFeeInfo](docs/sdks/functionsread/README.md#editiongetplatformfeeinfo) - Get Platform Fee Info	
+* [editionGetPlatformFeeType](docs/sdks/functionsread/README.md#editiongetplatformfeetype) - Platform fee information	
+* [editionGetRoleAdmin](docs/sdks/functionsread/README.md#editiongetroleadmin) - Get Role Admin	
+* [editionGetRoleMember](docs/sdks/functionsread/README.md#editiongetrolemember) - Get Role Member	
+* [editionGetRoleMemberCount](docs/sdks/functionsread/README.md#editiongetrolemembercount) - Get Role Member Count	
+* [editionGetRoyaltyInfoForToken](docs/sdks/functionsread/README.md#editiongetroyaltyinfofortoken) - Get Royalty Info for Token	
+* [editionHasRole](docs/sdks/functionsread/README.md#editionhasrole) - Has Role
+* [editionIsApprovedForAll](docs/sdks/functionsread/README.md#editionisapprovedforall) - Is Approved for all
+* [editionIsTrustedForwarder](docs/sdks/functionsread/README.md#editionistrustedforwarder) - Is Trusted Forwarder
+* [editionName](docs/sdks/functionsread/README.md#editionname) - Name
+* [editionNextTokenIdToMint](docs/sdks/functionsread/README.md#editionnexttokenidtomint) - Next TokenId To Mint
+* [editionOperatorRestriction](docs/sdks/functionsread/README.md#editionoperatorrestriction) - Operator Restriction
+* [editionOwner](docs/sdks/functionsread/README.md#editionowner) - Owner
+* [editionPlatformFeeRecipient](docs/sdks/functionsread/README.md#editionplatformfeerecipient) - Recipient of platform fees	
+* [editionPrimarySaleRecipient](docs/sdks/functionsread/README.md#editionprimarysalerecipient) - Primary Sale Recipient
+* [editionRoyaltyInfo](docs/sdks/functionsread/README.md#editionroyaltyinfo) - Royalty Info
+* [editionSaleRecipientForToken](docs/sdks/functionsread/README.md#editionsalerecipientfortoken) - Recipient of sales proceeds for a token	
+* [editionSupportsInterface](docs/sdks/functionsread/README.md#editionsupportsinterface) - Supports Interface	
+* [editionSymbol](docs/sdks/functionsread/README.md#editionsymbol) - Symbol
+* [editionTotalSupply](docs/sdks/functionsread/README.md#editiontotalsupply) - Total Supply	
+* [editionUri](docs/sdks/functionsread/README.md#editionuri) - URI for a token	
+* [editionVerify](docs/sdks/functionsread/README.md#editionverify) - Verifies a signature on a mint request	
+
+### [FunctionsWrite](docs/sdks/functionswrite/README.md)
+
+* [editionBurn](docs/sdks/functionswrite/README.md#editionburn) - Burn
+* [editionBurnBatch](docs/sdks/functionswrite/README.md#editionburnbatch) - Burns multiple tokens	
+* [editionGrantRole](docs/sdks/functionswrite/README.md#editiongrantrole) - Grant Role
+* [editionInitialize](docs/sdks/functionswrite/README.md#editioninitialize) - Initialize
+* [editionMintTo](docs/sdks/functionswrite/README.md#editionmintto) - Mints a token to an account	
+* [editionMintWithSignature](docs/sdks/functionswrite/README.md#editionmintwithsignature)
+* [editionMulticall](docs/sdks/functionswrite/README.md#editionmulticall) - Multicall
+* [editionRenounceRole](docs/sdks/functionswrite/README.md#editionrenouncerole) - Renounce Role
+* [editionRevokeRole](docs/sdks/functionswrite/README.md#editionrevokerole) - Revoke Role
+* [editionSafeBatchTransferFrom](docs/sdks/functionswrite/README.md#editionsafebatchtransferfrom) - Safely transfer tokens from one address to another	
+* [editionSafeTransferFrom](docs/sdks/functionswrite/README.md#editionsafetransferfrom) - Safe Transfer From
+* [editionSetApprovalForAll](docs/sdks/functionswrite/README.md#editionsetapprovalforall) - Set Approval For All
+* [editionSetContractURI](docs/sdks/functionswrite/README.md#editionsetcontracturi) - Set Contract URI	
+* [editionSetDefaultRoyaltyInfo](docs/sdks/functionswrite/README.md#editionsetdefaultroyaltyinfo) - Set Default Royalty Info	
+* [editionSetFlatPlatformFeeInfo](docs/sdks/functionswrite/README.md#editionsetflatplatformfeeinfo) - Sets the flat platform fee and recipient	
+* [editionSetOperatorRestriction](docs/sdks/functionswrite/README.md#editionsetoperatorrestriction) - Set Operator Restriction	
+* [editionSetOwner](docs/sdks/functionswrite/README.md#editionsetowner) - Set Owner	
+* [editionSetPlatformFeeInfo](docs/sdks/functionswrite/README.md#editionsetplatformfeeinfo) - Set Platform Fee Info	
+* [editionSetPlatformFeeType](docs/sdks/functionswrite/README.md#editionsetplatformfeetype) - Sets the platform fee type	
+* [editionSetPrimarySaleRecipient](docs/sdks/functionswrite/README.md#editionsetprimarysalerecipient) - Set Primary Sale Recipient	
+* [editionSetRoyaltyInfoForToken](docs/sdks/functionswrite/README.md#editionsetroyaltyinfofortoken) - Set Royalty Info For Token	
+* [editionSubscribeToRegistry](docs/sdks/functionswrite/README.md#editionsubscribetoregistry) - Subscribe To Registry	
+
+### [NFTs](docs/sdks/nfts/README.md)
+
+* [listNFTUsers](docs/sdks/nfts/README.md#listnftusers) - List all NFT Users
+* [listNFTs](docs/sdks/nfts/README.md#listnfts) - List all NFTs
+* [showNFT](docs/sdks/nfts/README.md#shownft) - Show a single NFTs
 <!-- End SDK Available Operations -->
 
 ### Maturity
