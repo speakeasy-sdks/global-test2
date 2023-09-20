@@ -1,185 +1,2204 @@
-openapi: 3.0.3
+openapi: 3.0.0
 info:
-  title: legit-core
-  description: ''
+  title: 'Legit OpenApi Documentation'
+  description: 'Legit OpenApi Documentation'
+  contact:
+    email: admin@legit.is
+  license:
+    name: 'Apache 2.0'
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   version: 1.0.0
 servers:
   -
-    url: 'http://legit.test:8000'
+    url: 'http://legit.test:8000/v1'
+    description: 'Legit API Core Server'
 paths:
-  '/v1/projects/{project_id}/customers/post':
-    post:
-      summary: 'New Customer'
-      operationId: newCustomer
-      description: 'Add a new customer to the project'
-      parameters: []
+  '/projects/{project}/customers':
+    get:
+      tags:
+        - Customers
+      summary: 'List all Customers'
+      description: 'Get a list of all the Customers of a Project'
+      operationId: getProjectCustomers
+      parameters:
+        -
+          name: project
+          in: path
+          description: 'Project id'
+          required: true
+          schema:
+            type: string
       responses:
         200:
-          description: 'Customer created successfully!'
+          description: 'Successful operation'
           content:
             application/json:
-              schema:
-                type: object
-                example:
-                  id: 9a136d5c-9336-4468-a85c-0e7863fc4c9c
-                  name: Subhadeep
-                  email: subhadeep+4@legit.is
-                  thumb: null
-                  wallet_connection: LEGIT_WALLET
-                  address: '0x882e1C37B6D38258E21938561355ae513c9B365e'
-                  custom_identifier: '12345678903'
-                  metadata:
-                    -
-                      key: key1
-                      value: value1
-                    -
-                      key: key2
-                      value: value2
-                  project_id: 99bb9d65-fb51-41b2-8cb2-21bcf680eb1b
-                  created_at: '2023-09-07T10:24:58.000000Z'
-                  updated_at: '2023-09-07T10:25:03.000000Z'
-                  deleted_at: null
-                properties:
-                  id:
-                    type: string
-                    example: 9a136d5c-9336-4468-a85c-0e7863fc4c9c
-                  name:
-                    type: string
-                    example: Subhadeep
-                    description: 'The Name of the customer.'
-                  email:
-                    type: string
-                    example: subhadeep+4@legit.is
-                    description: 'The Email of the customer.'
-                  thumb:
-                    type: string
-                    example: null
-                    description: 'The Avatar of the customer.'
-                  wallet_connection:
-                    type: string
-                    example: LEGIT_WALLET
-                    description: 'The wallet connection type of the customer.'
-                  address:
-                    type: string
-                    example: '0x882e1C37B6D38258E21938561355ae513c9B365e'
-                    description: 'The wallet address of the customer.'
-                  custom_identifier:
-                    type: string
-                    example: '12345678903'
-                    description: 'The Custom Identifier of the customer in the organization.'
-                  metadata:
-                    type: array
-                    example:
-                      -
-                        key: key1
-                        value: value1
-                      -
-                        key: key2
-                        value: value2
-                    description: 'Metadata information.'
-                    items:
-                      type: object
-                      properties:
-                        key:
-                          type: string
-                          example: key1
-                        value:
-                          type: string
-                          example: value1
-                  project_id:
-                    type: string
-                    example: 99bb9d65-fb51-41b2-8cb2-21bcf680eb1b
-                  created_at:
-                    type: string
-                    example: '2023-09-07T10:24:58.000000Z'
-                  updated_at:
-                    type: string
-                    example: '2023-09-07T10:25:03.000000Z'
-                  deleted_at:
-                    type: string
-                    example: null
-        400:
-          description: Unauthenticated!
+              schema: { type: array, items: { $ref: '#/components/schemas/Customer' } }
+        401:
+          description: Unauthenticated
           content:
             application/json:
-              schema:
-                type: object
-                example:
-                  status_code: 401
-                  error_code: ERR401
-                  message: 'Unauthorized to access this resource(s)'
-                  data: Unauthenticated.
-                properties:
-                  status_code:
-                    type: integer
-                    example: 401
-                  error_code:
-                    type: string
-                    example: ERR401
-                  message:
-                    type: string
-                    example: 'Unauthorized to access this resource(s)'
-                    description: 'Metadata information.'
-                  data:
-                    type: string
-                    example: Unauthenticated.
+              schema: { $ref: '#/components/schemas/Unauthorized' }
+    post:
       tags:
-        - Global
+        - Customers
+      summary: 'Add a Customer'
+      description: 'Add a new customer to the project'
+      operationId: newCustomer
+      parameters:
+        -
+          name: project
+          in: path
+          description: 'Project id'
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCustomer'
+      responses:
+        200:
+          description: 'Successful operation'
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Customer' }
+        401:
+          description: Unauthenticated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Unauthorized' }
+  '/customers/{customer}':
+    get:
+      tags:
+        - Customers
+      summary: 'View Customer'
+      description: 'View a single Customer of a Project'
+      operationId: getCustomer
+      parameters:
+        -
+          name: customer
+          in: path
+          description: 'Customer id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Successful operation'
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Customer' }
+        401:
+          description: Unauthenticated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Unauthorized' }
+    put:
+      tags:
+        - Customers
+      summary: 'Update Customer'
+      description: 'Update the record of an existing customer'
+      operationId: updateCustomer
+      parameters:
+        -
+          name: customer
+          in: path
+          description: 'Customer id'
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCustomer'
+      responses:
+        200:
+          description: 'Successful operation'
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Customer' }
+        401:
+          description: Unauthenticated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Unauthorized' }
+    delete:
+      tags:
+        - Customers
+      summary: 'Delete Customer'
+      description: 'Delete the record of an existing customer'
+      operationId: deleteCustomer
+      parameters:
+        -
+          name: customer
+          in: path
+          description: 'Customer id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Successful operation'
+        401:
+          description: Unauthenticated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Unauthorized' }
+  '/templates/{template}/nfts':
+    get:
+      tags:
+        - NFTs
+      summary: 'List all NFTs'
+      description: 'Get a list of all the NFTs of a Project'
+      operationId: listNFTs
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Successful operation'
+          content:
+            application/json:
+              schema: { type: array, items: { $ref: '#/components/schemas/NFT' } }
+        401:
+          description: Unauthenticated
+  '/templates/{template}/nfts/{token}':
+    get:
+      tags:
+        - NFTs
+      summary: 'Show a single NFTs'
+      description: 'Show a single NFT of a Template'
+      operationId: showNFT
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+        -
+          name: token
+          in: path
+          description: 'Token id'
+          required: true
+          schema:
+            type: number
+            example: 1
+      responses:
+        200:
+          description: 'Successful operation'
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/NFT' }
+        401:
+          description: Unauthenticated
+  '/templates/{template}/nfts{token}/balances':
+    get:
+      tags:
+        - NFTs
+      summary: 'List all NFT Users'
+      description: 'Get a list of all the NFT Users'
+      operationId: listNFTUsers
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+        -
+          name: token
+          in: path
+          description: 'Token id'
+          required: true
+          schema:
+            type: number
+            example: 1
+      responses:
+        200:
+          description: 'Successful operation'
+          content:
+            application/json:
+              schema: { type: array, items: { $ref: '#/components/schemas/NFTUser' } }
+        401:
+          description: Unauthenticated
+  '/templates/{template}/playground/functions/isApprovedForAll':
+    post:
+      summary: 'Is Approved for all'
+      operationId: Edition_isApprovedForAll
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
       requestBody:
         required: false
         content:
-          multipart/form-data:
+          application/json:
             schema:
               type: object
-              properties:
-                name:
-                  type: string
-                  description: 'The Name of the customer.'
-                  example: commodi
-                custom_identifier:
-                  type: string
-                  description: 'The Custom Identifier of the customer in the organization.'
-                  example: iusto
-                email:
-                  type: string
-                  description: 'The Email of the customer.'
-                  example: anya24@example.org
-                thumb:
-                  type: string
-                  format: binary
-                  description: 'The Avatar of the customer.'
-                metadata:
-                  type: array
-                  description: 'Customer information as Key-Value pair.'
-                  example:
-                    - []
-                  items:
-                    type: object
-    parameters:
-      -
-        in: path
-        name: project_id
-        description: 'Optional parameter. The ID of the project'
-        required: true
-        schema:
-          type: string
-        examples:
-          omitted:
-            summary: 'When the value is omitted'
-            value: ''
-          present:
-            summary: 'When the value is present'
-            value: quae
-tags:
-  -
-    name: Global
-    description: ''
+              properties: null
+  '/templates/{template}/playground/functions/primarySaleRecipient':
+    post:
+      summary: 'Primary Sale Recipient'
+      operationId: Edition_primarySaleRecipient
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/revokeRole':
+    post:
+      summary: 'Revoke Role'
+      operationId: Edition_revokeRole
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/royaltyInfo':
+    post:
+      summary: 'Royalty Info'
+      operationId: Edition_royaltyInfo
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: ['blockchain result'] }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/setApprovalForAll':
+    post:
+      summary: 'Set Approval For All'
+      operationId: Edition_setApprovalForAll
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/setContractURI':
+    post:
+      summary: "Set Contract URI\t"
+      operationId: Edition_setContractURI
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/setDefaultRoyaltyInfo':
+    post:
+      summary: "Set Default Royalty Info\t"
+      operationId: Edition_setDefaultRoyaltyInfo
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/setOperatorRestriction':
+    post:
+      summary: "Set Operator Restriction\t"
+      operationId: Edition_setOperatorRestriction
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/setPlatformFeeInfo':
+    post:
+      summary: "Set Platform Fee Info\t"
+      operationId: Edition_setPlatformFeeInfo
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/platformFeeRecipient':
+    post:
+      summary: "Recipient of platform fees\t"
+      operationId: Edition_platformFeeRecipient
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/saleRecipientForToken':
+    post:
+      summary: "Recipient of sales proceeds for a token\t"
+      operationId: Edition_saleRecipientForToken
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/setFlatPlatformFeeInfo':
+    post:
+      summary: "Sets the flat platform fee and recipient\t"
+      operationId: Edition_setFlatPlatformFeeInfo
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/setOwner':
+    post:
+      summary: "Set Owner\t"
+      operationId: Edition_setOwner
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/setPlatformFeeType':
+    post:
+      summary: "Sets the platform fee type\t"
+      operationId: Edition_setPlatformFeeType
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/uri':
+    post:
+      summary: "URI for a token\t"
+      operationId: Edition_uri
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/verify':
+    post:
+      summary: "Verifies a signature on a mint request\t"
+      operationId: Edition_verify
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: ['blockchain result'] }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/contractVersion':
+    post:
+      summary: ''
+      operationId: Edition_contractVersion
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/balanceOfBatch':
+    post:
+      summary: 'Balance of multiple accounts'
+      operationId: Edition_balanceOfBatch
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/burnBatch':
+    post:
+      summary: "Burns multiple tokens\t"
+      operationId: Edition_burnBatch
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/getFlatPlatformFeeInfo':
+    post:
+      summary: "Flat platform fee information\t"
+      operationId: Edition_getFlatPlatformFeeInfo
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: ['blockchain result'] }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/getPlatformFeeType':
+    post:
+      summary: "Platform fee information\t"
+      operationId: Edition_getPlatformFeeType
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/getRoleAdmin':
+    post:
+      summary: "Get Role Admin\t"
+      operationId: Edition_getRoleAdmin
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/DEFAULT_ADMIN_ROLE':
+    post:
+      summary: 'Default Admin Role'
+      operationId: Edition_DEFAULT_ADMIN_ROLE
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/balanceOf':
+    post:
+      summary: 'Balance of'
+      operationId: Edition_balanceOf
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/isTrustedForwarder':
+    post:
+      summary: 'Is Trusted Forwarder'
+      operationId: Edition_isTrustedForwarder
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/multicall':
+    post:
+      summary: Multicall
+      operationId: Edition_multicall
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/name':
+    post:
+      summary: Name
+      operationId: Edition_name
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/nextTokenIdToMint':
+    post:
+      summary: 'Next TokenId To Mint'
+      operationId: Edition_nextTokenIdToMint
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/contractURI':
+    post:
+      summary: "Contract URI\t"
+      operationId: Edition_contractURI
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/getDefaultRoyaltyInfo':
+    post:
+      summary: "Get Default Royalty Info\t"
+      operationId: Edition_getDefaultRoyaltyInfo
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: ['blockchain result'] }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/getPlatformFeeInfo':
+    post:
+      summary: "Get Platform Fee Info\t"
+      operationId: Edition_getPlatformFeeInfo
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: ['blockchain result'] }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/grantRole':
+    post:
+      summary: 'Grant Role'
+      operationId: Edition_grantRole
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/getRoleMember':
+    post:
+      summary: "Get Role Member\t"
+      operationId: Edition_getRoleMember
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/getRoleMemberCount':
+    post:
+      summary: "Get Role Member Count\t"
+      operationId: Edition_getRoleMemberCount
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/getRoyaltyInfoForToken':
+    post:
+      summary: "Get Royalty Info for Token\t"
+      operationId: Edition_getRoyaltyInfoForToken
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: ['blockchain result'] }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/hasRole':
+    post:
+      summary: 'Has Role'
+      operationId: Edition_hasRole
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/operatorRestriction':
+    post:
+      summary: 'Operator Restriction'
+      operationId: Edition_operatorRestriction
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/setPrimarySaleRecipient':
+    post:
+      summary: "Set Primary Sale Recipient\t"
+      operationId: Edition_setPrimarySaleRecipient
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/totalSupply':
+    post:
+      summary: "Total Supply\t"
+      operationId: Edition_totalSupply
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/symbol':
+    post:
+      summary: Symbol
+      operationId: Edition_symbol
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/supportsInterface':
+    post:
+      summary: "Supports Interface\t"
+      operationId: Edition_supportsInterface
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/subscribeToRegistry':
+    post:
+      summary: "Subscribe To Registry\t"
+      operationId: Edition_subscribeToRegistry
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/mintTo':
+    post:
+      summary: "Mints a token to an account\t"
+      operationId: Edition_mintTo
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/owner':
+    post:
+      summary: Owner
+      operationId: Edition_owner
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'blockchain result' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Read)
+  '/templates/{template}/playground/functions/renounceRole':
+    post:
+      summary: 'Renounce Role'
+      operationId: Edition_renounceRole
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/safeTransferFrom':
+    post:
+      summary: 'Safe Transfer From'
+      operationId: Edition_safeTransferFrom
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/safeBatchTransferFrom':
+    post:
+      summary: "Safely transfer tokens from one address to another\t"
+      operationId: Edition_safeBatchTransferFrom
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/burn':
+    post:
+      summary: Burn
+      operationId: Edition_burn
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/setRoyaltyInfoForToken':
+    post:
+      summary: "Set Royalty Info For Token\t"
+      operationId: Edition_setRoyaltyInfoForToken
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/mintWithSignature':
+    post:
+      summary: ''
+      operationId: Edition_mintWithSignature
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
+  '/templates/{template}/playground/functions/initialize':
+    post:
+      summary: Initialize
+      operationId: Edition_initialize
+      description: ''
+      parameters:
+        -
+          name: template
+          in: path
+          description: 'Template id'
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Transaction submitted on chain!'
+          content:
+            application/json:
+              schema: { type: string, example: 'Your transactions is now being processed on chain. Please Wait!' }
+        401:
+          description: Unauthorized!
+          content:
+            application/json:
+              schema: { type: object, example: { status_code: 401, error_code: ERR401, message: 'Unauthorized to access this resource(s)', data: Unauthorized. }, properties: { status_code: { type: integer, example: 401 }, error_code: { type: string, example: ERR401 }, message: { type: string, example: 'Unauthorized to access this resource(s)' }, data: { type: string, example: Unauthenticated. } } }
+      tags:
+        - Functions(Write)
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: null
 components:
+  schemas:
+    Customer:
+      title: Customer
+      description: 'Customer model'
+      properties:
+        id:
+          title: ID
+          description: ID
+          format: uuid
+          example: 99bb9ba9-45ec-4f27-a6e2-2e7c11667350
+        name:
+          title: Name
+          description: Name
+          type: string
+        email:
+          title: Email
+          description: Email
+          type: string
+          format: email
+        thumb:
+          title: Avatar
+          description: 'Avatar of the customer'
+          type: string
+          format: binary
+          example: /tmp/file1
+        wallet_connection:
+          title: 'Wallet Connection'
+          description: 'Wallet Connection of the customer'
+          type: string
+          enum:
+            - LEGIT_WALLET
+          example: LEGIT_WALLET
+        address:
+          title: Address
+          description: 'Blockchain Address'
+          type: string
+          format: base64
+          example: '0xb30401952A0648849816Bc99Af08F2369A5bB98C'
+        custom_identifier:
+          title: 'Custom Identifier'
+          description: 'The Custom Identifier of the customer in the organization'
+          type: string
+          example: org-user-123
+        metadata:
+          title: 'Metadata Properties'
+          description: 'The Metadata Properties of the customer in the organization'
+          type: string
+          example:
+            -
+              key: key1
+              value: value1
+            -
+              key: key1
+              value: value1
+        project_id:
+          title: 'Project ID'
+          description: 'Project ID'
+          type: integer
+          format: uuid
+          example: 99bb9ba9-45ec-4f27-a6e2-2e7c11667350
+        created_at:
+          title: 'Created at'
+          description: 'Created at'
+          type: string
+          format: datetime
+          example: '2020-01-27 17:50:45'
+        updated_at:
+          title: 'Updated at'
+          description: 'Updated at'
+          type: string
+          format: datetime
+          example: '2020-01-27 17:50:45'
+        deleted_at:
+          title: 'Deleted at'
+          description: 'Deleted at'
+          type: string
+          format: datetime
+          example: '2020-01-27 17:50:45'
+        status:
+          title: Status
+          description: 'Status of the customer'
+          type: string
+          enum:
+            - ACTIVE
+            - BLOCKED
+          example: ACTIVE
+      type: object
+    NFT:
+      title: NFT
+      description: 'NFT Schema'
+      properties:
+        id:
+          title: 'Token ID'
+          description: 'Token ID'
+          type: integer
+          example: '11'
+        name:
+          title: Name
+          description: Name
+          type: string
+          example: 'NFT Badge'
+        description:
+          title: Description
+          description: 'This is the Badge NFT'
+          type: string
+        address:
+          title: Address
+          description: 'Blockchain Address'
+          type: string
+          format: base64
+          example: '0xb30401952A0648849816Bc99Af08F2369A5bB98C'
+        balance:
+          title: Balance
+          description: Balance
+          type: integer
+          example: '1000'
+        metadata:
+          title: 'Metadata Properties'
+          description: 'The Metadata Properties of the NFT'
+          type: string
+          example:
+            image:
+              ipfs_url: 'ipfs://Qmf886aRRUFHouPhxAbCee7BuAGvqMC4Z4LFAFBHqPjEsS'
+              https_url: 'https://ipfs.io/ipfs/Qmf886aRRUFHouPhxAbCee7BuAGvqMC4Z4LFAFBHqPjEsS'
+            initial_supply: '654'
+            attributes:
+              - { type: stat, value: '87', trait_type: Speed, max_value: '100' }
+              - { type: stat, value: '91', trait_type: Agility, max_value: '100' }
+            media:
+              - { ipfs_url: 'ipfs://Qmf886aRRUFHouPhxAbCee7BuAGvqMC4Z4LFAFBHqPjEsS', https_url: 'https://ipfs.io/ipfs/Qmf886aRRUFHouPhxAbCee7BuAGvqMC4Z4LFAFBHqPjEsS' }
+              - { ipfs_url: 'ipfs://QmdWuexqCimNdXVsnmbzS7iNPnzyKRkFzmmHFQxx2YmxTW', https_url: 'https://ipfs.io/ipfs/QmdWuexqCimNdXVsnmbzS7iNPnzyKRkFzmmHFQxx2YmxTW' }
+        last_updated:
+          title: 'Last Updated at'
+          description: 'Last Updated at'
+          type: string
+          format: datetime
+          example: '2020-01-27 17:50:45'
+        template:
+          $ref: '#/components/schemas/Template'
+      type: object
+    NFTUser:
+      title: NFTUser
+      description: 'NFTUser Schema'
+      properties:
+        id:
+          title: ID
+          description: ID
+          format: uuid
+          example: 99bb9ba9-45ec-4f27-a6e2-2e7c11667350
+        name:
+          title: Name
+          description: Name
+          type: string
+        email:
+          title: Email
+          description: Email
+          type: string
+          format: email
+        thumb:
+          title: Avatar
+          description: 'Avatar of the customer'
+          type: string
+          format: binary
+          example: /tmp/file1
+        address:
+          title: Address
+          description: 'Blockchain Address'
+          type: string
+          format: base64
+          example: '0xb30401952A0648849816Bc99Af08F2369A5bB98C'
+        created_at:
+          title: 'Created at'
+          description: 'Created at'
+          type: string
+          format: datetime
+          example: '2020-01-27 17:50:45'
+        balance:
+          title: Balance
+          description: Balance
+          type: integer
+          example: '1000'
+      type: object
+    Template:
+      title: Template
+      description: 'Template model'
+      properties:
+        id:
+          title: ID
+          description: ID
+          format: uuid
+          example: 99bb9ba9-45ec-4f27-a6e2-2e7c11667350
+        name:
+          title: Name
+          description: Name
+          type: string
+        email:
+          title: Email
+          description: Email
+          type: string
+          format: email
+        thumb:
+          title: Avatar
+          description: 'Avatar of the Template'
+          type: string
+          format: binary
+          example: /tmp/file1
+        wallet_connection:
+          title: 'Wallet Connection'
+          description: 'Wallet Connection of the Template'
+          type: string
+          enum:
+            - LEGIT_WALLET
+          example: LEGIT_WALLET
+        address:
+          title: Address
+          description: 'Blockchain Address'
+          type: string
+          format: base64
+          example: '0xb30401952A0648849816Bc99Af08F2369A5bB98C'
+        custom_identifier:
+          title: 'Custom Identifier'
+          description: 'The Custom Identifier of the Template in the organization'
+          type: string
+          example: org-user-123
+        metadata:
+          title: 'Metadata Properties'
+          description: 'The Metadata Properties of the Template in the organization'
+          type: string
+          example:
+            -
+              key: key1
+              value: value1
+            -
+              key: key1
+              value: value1
+        project_id:
+          title: 'Project ID'
+          description: 'Project ID'
+          type: integer
+          format: uuid
+          example: 99bb9ba9-45ec-4f27-a6e2-2e7c11667350
+        created_at:
+          title: 'Created at'
+          description: 'Created at'
+          type: string
+          format: datetime
+          example: '2020-01-27 17:50:45'
+        updated_at:
+          title: 'Updated at'
+          description: 'Updated at'
+          type: string
+          format: datetime
+          example: '2020-01-27 17:50:45'
+        deleted_at:
+          title: 'Deleted at'
+          description: 'Deleted at'
+          type: string
+          format: datetime
+          example: '2020-01-27 17:50:45'
+        status:
+          title: Status
+          description: 'Status of the Template'
+          type: string
+          enum:
+            - ACTIVE
+            - BLOCKED
+          example: ACTIVE
+      type: object
+    CreateCustomer:
+      title: 'Create Customer Request'
+      description: 'Create Customer body data'
+      properties:
+        name:
+          title: Name
+          description: Name
+          type: string
+        email:
+          title: Email
+          description: Email
+          type: string
+          format: email
+        custom_identifier:
+          title: 'Custom Identifier'
+          description: 'The Custom Identifier of the customer in the organization'
+          type: string
+          example: org-user-123
+        metadata:
+          title: 'Metadata Properties'
+          description: 'The Metadata Properties of the customer in the organization'
+          type: string
+          example:
+            -
+              key: key1
+              value: value1
+            -
+              key: key1
+              value: value1
+      type: object
+    UpdateCustomer:
+      title: 'Update Customer Request'
+      description: 'Update Customer body data'
+      properties:
+        name:
+          title: Name
+          description: Name
+          type: string
+        email:
+          title: Email
+          description: Email
+          type: string
+          format: email
+        custom_identifier:
+          title: 'Custom Identifier'
+          description: 'The Custom Identifier of the customer in the organization'
+          type: string
+          example: org-user-123
+        thumb:
+          title: Avatar
+          description: 'Avatar of the customer'
+          type: string
+          format: binary
+          example: /tmp/file1
+        metadata:
+          title: 'Metadata Properties'
+          description: 'The Metadata Properties of the customer in the organization'
+          type: string
+          example:
+            -
+              key: key1
+              value: value1
+            -
+              key: key1
+              value: value1
+      type: object
+    Unauthorized:
+      title: Unauthorized
+      description: 'Unauthorized Response'
+      properties:
+        status_code:
+          title: 'Status Code'
+          description: 'Status Code'
+          type: integer
+          format: int64
+          example: '401'
+        error_code:
+          title: 'Error Code'
+          description: 'Error Code'
+          type: string
+          example: ERR401
+        message:
+          title: Message
+          description: Message
+          type: string
+          example: 'Unauthorized to access this resource(s)'
+        data:
+          title: Data
+          description: 'Error Data'
+          type: object
+          example: Unauthorized.
+      type: object
   securitySchemes:
     default:
       type: http
+      description: 'Enter token'
+      name: Authorization
       scheme: bearer
-      description: ''
+tags:
+  -
+    name: Customers
+    description: 'API Endpoints of Customers'
+  -
+    name: NFTs
+    description: 'API Endpoints of NFTs'
+  -
+    name: Functions(Read)
+    description: "All Edition's Read functions"
+  -
+    name: Functions(Write)
+    description: "All Edition's Write functions"
 security:
   -
-    default: []
+    default: {  }
