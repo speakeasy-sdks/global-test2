@@ -146,7 +146,7 @@ sdk.customers.newCustomer({
   createCustomer: {
     customIdentifier: "org-user-123",
     email: "Ryan.Little62@yahoo.com",
-    metadata: "[{"key":"key1","value":"value1"},{"key":"key1","value":"value1"}]",
+    metadata: "[{"key":"key1","value":"value1"},{"value":"value1","key":"key1"}]",
     name: "Rick Kertzmann",
   },
   project: "ipsa",
