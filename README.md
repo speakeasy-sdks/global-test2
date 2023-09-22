@@ -24,8 +24,6 @@ yarn add https://github.com/speakeasy-sdks/global-test2
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { GlobalTest2 } from "global-test2";
 import { DeleteCustomerResponse } from "global-test2/dist/sdk/models/operations";
@@ -37,7 +35,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.customers.deleteCustomer({
-  customer: "corrupti",
+  customer: "provident",
 }).then((res: DeleteCustomerResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -121,6 +119,32 @@ sdk.customers.deleteCustomer({
 * [listNFTs](docs/sdks/nfts/README.md#listnfts) - List all NFTs
 * [showNFT](docs/sdks/nfts/README.md#shownft) - Show a single NFTs
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Pagination -->
+# Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `next` method that can be called to pull down the next group of results. If the
+return value of `next` is `null`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+
+
+<!-- End Pagination -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

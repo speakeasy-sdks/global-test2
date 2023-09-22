@@ -143,11 +143,6 @@ src/sdk/models/shared/nft.ts
 src/sdk/models/shared/template.ts
 src/sdk/models/shared/security.ts
 src/sdk/models/shared/index.ts
-docs/sdks/globaltest2/README.md
-docs/sdks/customers/README.md
-docs/sdks/functionsread/README.md
-docs/sdks/functionswrite/README.md
-docs/sdks/nfts/README.md
 USAGE.md
 docs/models/operations/deletecustomerrequest.md
 docs/models/operations/deletecustomerresponse.md
@@ -368,4 +363,9 @@ docs/models/shared/templatestatus.md
 docs/models/shared/templatewalletconnection.md
 docs/models/shared/template.md
 docs/models/shared/security.md
+docs/sdks/globaltest2/README.md
+docs/sdks/customers/README.md
+docs/sdks/functionsread/README.md
+docs/sdks/functionswrite/README.md
+docs/sdks/nfts/README.md
 .gitattributes

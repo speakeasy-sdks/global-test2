@@ -29,7 +29,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.customers.deleteCustomer({
-  customer: "provident",
+  customer: "distinctio",
 }).then((res: DeleteCustomerResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -67,7 +67,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.customers.getCustomer({
-  customer: "distinctio",
+  customer: "quibusdam",
 }).then((res: GetCustomerResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -105,7 +105,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.customers.getProjectCustomers({
-  project: "quibusdam",
+  project: "unde",
 }).then((res: GetProjectCustomersResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -145,8 +145,8 @@ const sdk = new GlobalTest2({
 sdk.customers.newCustomer({
   createCustomer: {
     customIdentifier: "org-user-123",
-    email: "Ryan.Little62@yahoo.com",
-    metadata: "[{"key":"key1","value":"value1"},{"value":"value1","key":"key1"}]",
+    email: "Karley_Stamm@hotmail.com",
+    metadata: "[{"key":"key1","value":"value1"},{"key":"key1","value":"value1"}]",
     name: "Rick Kertzmann",
   },
   project: "ipsa",
