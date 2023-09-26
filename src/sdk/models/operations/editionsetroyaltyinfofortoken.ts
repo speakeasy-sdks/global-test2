@@ -19,6 +19,9 @@ export class EditionSetRoyaltyInfoForTokenRequest extends SpeakeasyBase {
 }
 
 export class EditionSetRoyaltyInfoForTokenResponse extends SpeakeasyBase {
+    /**
+     * HTTP response content type for this operation
+     */
     @SpeakeasyMetadata()
     contentType: string;
 
@@ -28,9 +31,15 @@ export class EditionSetRoyaltyInfoForTokenResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     editionSetRoyaltyInfoForToken200ApplicationJSONString?: string;
 
+    /**
+     * HTTP response status code for this operation
+     */
     @SpeakeasyMetadata()
     statusCode: number;
 
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
 }

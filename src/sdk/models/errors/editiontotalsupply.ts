@@ -10,6 +10,9 @@ import { classToPlain, Exclude, Expose } from "class-transformer";
  * Unauthorized!
  */
 export class EditionTotalSupply401ApplicationJSON extends Error {
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     @SpeakeasyMetadata()
     @Exclude()
     rawResponse?: AxiosResponse;

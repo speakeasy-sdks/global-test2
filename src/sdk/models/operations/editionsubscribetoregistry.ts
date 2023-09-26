@@ -19,6 +19,9 @@ export class EditionSubscribeToRegistryRequest extends SpeakeasyBase {
 }
 
 export class EditionSubscribeToRegistryResponse extends SpeakeasyBase {
+    /**
+     * HTTP response content type for this operation
+     */
     @SpeakeasyMetadata()
     contentType: string;
 
@@ -28,9 +31,15 @@ export class EditionSubscribeToRegistryResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     editionSubscribeToRegistry200ApplicationJSONString?: string;
 
+    /**
+     * HTTP response status code for this operation
+     */
     @SpeakeasyMetadata()
     statusCode: number;
 
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
 }
