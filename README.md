@@ -48,7 +48,7 @@ sdk.customers.deleteCustomer({
 ## Available Resources and Operations
 
 
-### [Customers](docs/sdks/customers/README.md)
+### [customers](docs/sdks/customers/README.md)
 
 * [deleteCustomer](docs/sdks/customers/README.md#deletecustomer) - Delete Customer
 * [getCustomer](docs/sdks/customers/README.md#getcustomer) - View Customer
@@ -56,7 +56,7 @@ sdk.customers.deleteCustomer({
 * [newCustomer](docs/sdks/customers/README.md#newcustomer) - Add a Customer
 * [updateCustomer](docs/sdks/customers/README.md#updatecustomer) - Update Customer
 
-### [FunctionsRead](docs/sdks/functionsread/README.md)
+### [functionsRead](docs/sdks/functionsread/README.md)
 
 * [editionDEFAULTADMINROLE](docs/sdks/functionsread/README.md#editiondefaultadminrole) - Default Admin Role
 * [editionBalanceOf](docs/sdks/functionsread/README.md#editionbalanceof) - Balance of
@@ -88,7 +88,7 @@ sdk.customers.deleteCustomer({
 * [editionUri](docs/sdks/functionsread/README.md#editionuri) - URI for a token	
 * [editionVerify](docs/sdks/functionsread/README.md#editionverify) - Verifies a signature on a mint request	
 
-### [FunctionsWrite](docs/sdks/functionswrite/README.md)
+### [functionsWrite](docs/sdks/functionswrite/README.md)
 
 * [editionBurn](docs/sdks/functionswrite/README.md#editionburn) - Burn
 * [editionBurnBatch](docs/sdks/functionswrite/README.md#editionburnbatch) - Burns multiple tokens	
@@ -113,7 +113,7 @@ sdk.customers.deleteCustomer({
 * [editionSetRoyaltyInfoForToken](docs/sdks/functionswrite/README.md#editionsetroyaltyinfofortoken) - Set Royalty Info For Token	
 * [editionSubscribeToRegistry](docs/sdks/functionswrite/README.md#editionsubscribetoregistry) - Subscribe To Registry	
 
-### [NFTs](docs/sdks/nfts/README.md)
+### [nfTs](docs/sdks/nfts/README.md)
 
 * [listNFTUsers](docs/sdks/nfts/README.md#listnftusers) - List all NFT Users
 * [listNFTs](docs/sdks/nfts/README.md#listnfts) - List all NFTs
