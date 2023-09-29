@@ -35,7 +35,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.customers.deleteCustomer({
-  customer: "provident",
+  customer: "IP deposit transmitting",
 }).then((res: DeleteCustomerResponse) => {
   if (res.statusCode == 200) {
     // handle response

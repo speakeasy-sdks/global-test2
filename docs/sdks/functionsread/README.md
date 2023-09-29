@@ -54,7 +54,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionDEFAULTADMINROLE({
-  template: "ab",
+  template: "Cisgender provided CLI",
 }).then((res: EditionDEFAULTADMINROLEResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -93,7 +93,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionBalanceOf({
   requestBody: {},
-  template: "quis",
+  template: "Diesel Ameliorated",
 }).then((res: EditionBalanceOfResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -132,7 +132,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionBalanceOfBatch({
   requestBody: {},
-  template: "veritatis",
+  template: "partnerships",
 }).then((res: EditionBalanceOfBatchResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -170,7 +170,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionContractURI({
-  template: "deserunt",
+  template: "East Awesome Lead",
 }).then((res: EditionContractURIResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -206,7 +206,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionContractVersion({
-  template: "perferendis",
+  template: "Bespoke Clothing",
 }).then((res: EditionContractVersionResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -244,7 +244,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionGetDefaultRoyaltyInfo({
-  template: "ipsam",
+  template: "Dubnium",
 }).then((res: EditionGetDefaultRoyaltyInfoResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -282,7 +282,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionGetFlatPlatformFeeInfo({
-  template: "repellendus",
+  template: "Checking Benin Celsius",
 }).then((res: EditionGetFlatPlatformFeeInfoResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -320,7 +320,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionGetPlatformFeeInfo({
-  template: "sapiente",
+  template: "Audi state",
 }).then((res: EditionGetPlatformFeeInfoResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -358,7 +358,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionGetPlatformFeeType({
-  template: "quo",
+  template: "seed",
 }).then((res: EditionGetPlatformFeeTypeResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -397,7 +397,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionGetRoleAdmin({
   requestBody: {},
-  template: "odit",
+  template: "airlift Recycled Peso",
 }).then((res: EditionGetRoleAdminResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -436,7 +436,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionGetRoleMember({
   requestBody: {},
-  template: "at",
+  template: "National",
 }).then((res: EditionGetRoleMemberResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -475,7 +475,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionGetRoleMemberCount({
   requestBody: {},
-  template: "at",
+  template: "frame Atascocita Bedfordshire",
 }).then((res: EditionGetRoleMemberCountResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -514,7 +514,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionGetRoyaltyInfoForToken({
   requestBody: {},
-  template: "maiores",
+  template: "Modern West input",
 }).then((res: EditionGetRoyaltyInfoForTokenResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -553,7 +553,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionHasRole({
   requestBody: {},
-  template: "molestiae",
+  template: "protocol",
 }).then((res: EditionHasRoleResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -592,7 +592,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionIsApprovedForAll({
   requestBody: {},
-  template: "quod",
+  template: "Direct mundane",
 }).then((res: EditionIsApprovedForAllResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -631,7 +631,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionIsTrustedForwarder({
   requestBody: {},
-  template: "quod",
+  template: "application youthfully ampere",
 }).then((res: EditionIsTrustedForwarderResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -669,7 +669,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionName({
-  template: "esse",
+  template: "bandwidth",
 }).then((res: EditionNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -707,7 +707,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionNextTokenIdToMint({
-  template: "totam",
+  template: "Regional Norwalk Polonium",
 }).then((res: EditionNextTokenIdToMintResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -745,7 +745,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionOperatorRestriction({
-  template: "porro",
+  template: "yahoo",
 }).then((res: EditionOperatorRestrictionResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -783,7 +783,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionOwner({
-  template: "dolorum",
+  template: "Pizza North",
 }).then((res: EditionOwnerResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -821,7 +821,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionPlatformFeeRecipient({
-  template: "dicta",
+  template: "female Facilitator",
 }).then((res: EditionPlatformFeeRecipientResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -859,7 +859,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionPrimarySaleRecipient({
-  template: "nam",
+  template: "Northwest transition third",
 }).then((res: EditionPrimarySaleRecipientResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -898,7 +898,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionRoyaltyInfo({
   requestBody: {},
-  template: "officia",
+  template: "Kong Sausages",
 }).then((res: EditionRoyaltyInfoResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -937,7 +937,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionSaleRecipientForToken({
   requestBody: {},
-  template: "occaecati",
+  template: "regional North",
 }).then((res: EditionSaleRecipientForTokenResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -976,7 +976,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionSupportsInterface({
   requestBody: {},
-  template: "fugit",
+  template: "shoes",
 }).then((res: EditionSupportsInterfaceResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1014,7 +1014,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.functionsRead.editionSymbol({
-  template: "deleniti",
+  template: "York Tesla",
 }).then((res: EditionSymbolResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1053,7 +1053,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionTotalSupply({
   requestBody: {},
-  template: "hic",
+  template: "readily silver International",
 }).then((res: EditionTotalSupplyResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1092,7 +1092,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionUri({
   requestBody: {},
-  template: "optio",
+  template: "Rupee Solutions",
 }).then((res: EditionUriResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1131,7 +1131,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsRead.editionVerify({
   requestBody: {},
-  template: "totam",
+  template: "cyan Minivan",
 }).then((res: EditionVerifyResponse) => {
   if (res.statusCode == 200) {
     // handle response

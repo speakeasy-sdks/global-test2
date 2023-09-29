@@ -28,7 +28,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.nfTs.listNFTUsers({
-  template: "in",
+  template: "Diesel invoice",
   token: 1,
 }).then((res: ListNFTUsersResponse) => {
   if (res.statusCode == 200) {
@@ -67,7 +67,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.nfTs.listNFTs({
-  template: "corporis",
+  template: "primary Coupe Integration",
 }).then((res: ListNFTsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -105,7 +105,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.nfTs.showNFT({
-  template: "iste",
+  template: "RAM Passenger",
   token: 1,
 }).then((res: ShowNFTResponse) => {
   if (res.statusCode == 200) {

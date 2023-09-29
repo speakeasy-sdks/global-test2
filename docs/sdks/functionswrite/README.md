@@ -48,7 +48,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionBurn({
   requestBody: {},
-  template: "beatae",
+  template: "generate Arkansas",
 }).then((res: EditionBurnResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -87,7 +87,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionBurnBatch({
   requestBody: {},
-  template: "commodi",
+  template: "Bicycle lux",
 }).then((res: EditionBurnBatchResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -126,7 +126,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionGrantRole({
   requestBody: {},
-  template: "molestiae",
+  template: "League Northeast Beaumont",
 }).then((res: EditionGrantRoleResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -165,7 +165,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionInitialize({
   requestBody: {},
-  template: "modi",
+  template: "Berkshire",
 }).then((res: EditionInitializeResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -204,7 +204,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionMintTo({
   requestBody: {},
-  template: "qui",
+  template: "SMTP quantifying unleash",
 }).then((res: EditionMintToResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -241,7 +241,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionMintWithSignature({
   requestBody: {},
-  template: "impedit",
+  template: "Savings",
 }).then((res: EditionMintWithSignatureResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -280,7 +280,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionMulticall({
   requestBody: {},
-  template: "cum",
+  template: "Throughway",
 }).then((res: EditionMulticallResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -319,7 +319,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionRenounceRole({
   requestBody: {},
-  template: "esse",
+  template: "Bedfordshire capacitor",
 }).then((res: EditionRenounceRoleResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -358,7 +358,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionRevokeRole({
   requestBody: {},
-  template: "ipsum",
+  template: "middleware inasmuch enim",
 }).then((res: EditionRevokeRoleResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -397,7 +397,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSafeBatchTransferFrom({
   requestBody: {},
-  template: "excepturi",
+  template: "Stage",
 }).then((res: EditionSafeBatchTransferFromResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -436,7 +436,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSafeTransferFrom({
   requestBody: {},
-  template: "aspernatur",
+  template: "connecting Metrics Southwest",
 }).then((res: EditionSafeTransferFromResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -475,7 +475,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSetApprovalForAll({
   requestBody: {},
-  template: "perferendis",
+  template: "female",
 }).then((res: EditionSetApprovalForAllResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -514,7 +514,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSetContractURI({
   requestBody: {},
-  template: "ad",
+  template: "argue red application",
 }).then((res: EditionSetContractURIResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -553,7 +553,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSetDefaultRoyaltyInfo({
   requestBody: {},
-  template: "natus",
+  template: "Applications API Northeast",
 }).then((res: EditionSetDefaultRoyaltyInfoResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -592,7 +592,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSetFlatPlatformFeeInfo({
   requestBody: {},
-  template: "sed",
+  template: "slowly Washington",
 }).then((res: EditionSetFlatPlatformFeeInfoResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -631,7 +631,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSetOperatorRestriction({
   requestBody: {},
-  template: "iste",
+  template: "Account",
 }).then((res: EditionSetOperatorRestrictionResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -670,7 +670,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSetOwner({
   requestBody: {},
-  template: "dolor",
+  template: "models Rubber supposing",
 }).then((res: EditionSetOwnerResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -709,7 +709,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSetPlatformFeeInfo({
   requestBody: {},
-  template: "natus",
+  template: "programming Northeast",
 }).then((res: EditionSetPlatformFeeInfoResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -748,7 +748,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSetPlatformFeeType({
   requestBody: {},
-  template: "laboriosam",
+  template: "success",
 }).then((res: EditionSetPlatformFeeTypeResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -787,7 +787,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSetPrimarySaleRecipient({
   requestBody: {},
-  template: "hic",
+  template: "Cambridgeshire Forest",
 }).then((res: EditionSetPrimarySaleRecipientResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -826,7 +826,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSetRoyaltyInfoForToken({
   requestBody: {},
-  template: "saepe",
+  template: "compressing teaching until",
 }).then((res: EditionSetRoyaltyInfoForTokenResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -865,7 +865,7 @@ const sdk = new GlobalTest2({
 
 sdk.functionsWrite.editionSubscribeToRegistry({
   requestBody: {},
-  template: "fuga",
+  template: "Music salmon International",
 }).then((res: EditionSubscribeToRegistryResponse) => {
   if (res.statusCode == 200) {
     // handle response

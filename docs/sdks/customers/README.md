@@ -30,7 +30,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.customers.deleteCustomer({
-  customer: "distinctio",
+  customer: "IP deposit transmitting",
 }).then((res: DeleteCustomerResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -68,7 +68,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.customers.getCustomer({
-  customer: "quibusdam",
+  customer: "heuristic modulo",
 }).then((res: GetCustomerResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -106,7 +106,7 @@ const sdk = new GlobalTest2({
 });
 
 sdk.customers.getProjectCustomers({
-  project: "unde",
+  project: "Chief Chair",
 }).then((res: GetProjectCustomersResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -146,11 +146,11 @@ const sdk = new GlobalTest2({
 sdk.customers.newCustomer({
   createCustomer: {
     customIdentifier: "org-user-123",
-    email: "Karley_Stamm@hotmail.com",
-    metadata: "[{"key":"key1","value":"value1"},{"key":"key1","value":"value1"}]",
-    name: "Rick Kertzmann",
+    email: "Llewellyn78@gmail.com",
+    metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"value\":\"value1\",\"key\":\"key1\"}]",
+    name: "headache AI",
   },
-  project: "ipsa",
+  project: "Rubber Towels",
 }).then((res: NewCustomerResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -190,12 +190,12 @@ const sdk = new GlobalTest2({
 sdk.customers.updateCustomer({
   updateCustomer: {
     customIdentifier: "org-user-123",
-    email: "Donny_Hoppe@hotmail.com",
-    metadata: "[{"key":"key1","value":"value1"},{"key":"key1","value":"value1"}]",
-    name: "Ken Kshlerin",
-    thumb: "recusandae".encode(),
+    email: "Kailee_Kertzmann67@hotmail.com",
+    metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"value\":\"value1\",\"key\":\"key1\"}]",
+    name: "Wagon",
+    thumb: "CJz/Cs-Y>r" as bytes <<<>>>,
   },
-  customer: "temporibus",
+  customer: "gah",
 }).then((res: UpdateCustomerResponse) => {
   if (res.statusCode == 200) {
     // handle response
