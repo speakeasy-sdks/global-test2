@@ -147,7 +147,7 @@ sdk.customers.newCustomer({
   createCustomer: {
     customIdentifier: "org-user-123",
     email: "Llewellyn78@gmail.com",
-    metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
+    metadata: "[{\"value\":\"value1\",\"key\":\"key1\"},{\"value\":\"value1\",\"key\":\"key1\"}]",
     name: "headache AI",
   },
   project: "Rubber Towels",
@@ -191,7 +191,7 @@ sdk.customers.updateCustomer({
   updateCustomer: {
     customIdentifier: "org-user-123",
     email: "Kailee_Kertzmann67@hotmail.com",
-    metadata: "[{\"value\":\"value1\",\"key\":\"key1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
+    metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
     name: "Wagon",
     thumb: "CJz/Cs-Y>r" as bytes <<<>>>,
   },
