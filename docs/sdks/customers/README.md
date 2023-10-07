@@ -21,21 +21,22 @@ Delete the record of an existing customer
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { DeleteCustomerResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.customers.deleteCustomer({
-  customer: "IP deposit transmitting",
-}).then((res: DeleteCustomerResponse) => {
+  const res = await sdk.customers.deleteCustomer({
+    customer: "IP deposit transmitting",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,21 +60,22 @@ View a single Customer of a Project
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { GetCustomerResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.customers.getCustomer({
-  customer: "heuristic modulo",
-}).then((res: GetCustomerResponse) => {
+  const res = await sdk.customers.getCustomer({
+    customer: "heuristic modulo",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -97,21 +99,22 @@ Get a list of all the Customers of a Project
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { GetProjectCustomersResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.customers.getProjectCustomers({
-  project: "Chief Chair",
-}).then((res: GetProjectCustomersResponse) => {
+  const res = await sdk.customers.getProjectCustomers({
+    project: "Chief Chair",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -135,27 +138,26 @@ Add a new customer to the project
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { NewCustomerResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.customers.newCustomer({
-  createCustomer: {
-    customIdentifier: "org-user-123",
-    email: "Llewellyn78@gmail.com",
-    metadata: "[{\"value\":\"value1\",\"key\":\"key1\"},{\"value\":\"value1\",\"key\":\"key1\"}]",
-    name: "headache AI",
-  },
-  project: "Rubber Towels",
-}).then((res: NewCustomerResponse) => {
+  const res = await sdk.customers.newCustomer({
+    createCustomer: {
+      customIdentifier: "org-user-123",
+      metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
+    },
+    project: "Branding",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -179,28 +181,27 @@ Update the record of an existing customer
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { UpdateCustomerResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.customers.updateCustomer({
-  updateCustomer: {
-    customIdentifier: "org-user-123",
-    email: "Kailee_Kertzmann67@hotmail.com",
-    metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
-    name: "Wagon",
-    thumb: "CJz/Cs-Y>r" as bytes <<<>>>,
-  },
-  customer: "gah",
-}).then((res: UpdateCustomerResponse) => {
+  const res = await sdk.customers.updateCustomer({
+    updateCustomer: {
+      customIdentifier: "org-user-123",
+      metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
+      thumb: "|RIpQ_8pxC" as bytes <<<>>>,
+    },
+    customer: "anenst tangible",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

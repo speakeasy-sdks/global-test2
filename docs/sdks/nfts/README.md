@@ -19,22 +19,23 @@ Get a list of all the NFT Users
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { ListNFTUsersResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.nfTs.listNFTUsers({
-  template: "Diesel invoice",
-  token: 1,
-}).then((res: ListNFTUsersResponse) => {
+  const res = await sdk.nfTs.listNFTUsers({
+    template: "Diesel invoice",
+    token: 1,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -58,21 +59,22 @@ Get a list of all the NFTs of a Project
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { ListNFTsResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.nfTs.listNFTs({
-  template: "primary Coupe Integration",
-}).then((res: ListNFTsResponse) => {
+  const res = await sdk.nfTs.listNFTs({
+    template: "primary Coupe Integration",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -96,22 +98,23 @@ Show a single NFT of a Template
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { ShowNFTResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.nfTs.showNFT({
-  template: "RAM Passenger",
-  token: 1,
-}).then((res: ShowNFTResponse) => {
+  const res = await sdk.nfTs.showNFT({
+    template: "RAM Passenger",
+    token: 1,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

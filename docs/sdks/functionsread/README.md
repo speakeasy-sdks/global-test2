@@ -45,21 +45,22 @@ Default Admin Role
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionDEFAULTADMINROLEResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionDEFAULTADMINROLE({
-  template: "Cisgender provided CLI",
-}).then((res: EditionDEFAULTADMINROLEResponse) => {
+  const res = await sdk.functionsRead.editionDEFAULTADMINROLE({
+    template: "Cisgender provided CLI",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -83,22 +84,23 @@ Balance of
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionBalanceOfResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionBalanceOf({
-  requestBody: {},
-  template: "Diesel Ameliorated",
-}).then((res: EditionBalanceOfResponse) => {
+  const res = await sdk.functionsRead.editionBalanceOf({
+    requestBody: {},
+    template: "Diesel Ameliorated",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -122,22 +124,23 @@ Balance of multiple accounts
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionBalanceOfBatchResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionBalanceOfBatch({
-  requestBody: {},
-  template: "partnerships",
-}).then((res: EditionBalanceOfBatchResponse) => {
+  const res = await sdk.functionsRead.editionBalanceOfBatch({
+    requestBody: {},
+    template: "partnerships",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -161,21 +164,22 @@ Contract URI
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionContractURIResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionContractURI({
-  template: "East Awesome Lead",
-}).then((res: EditionContractURIResponse) => {
+  const res = await sdk.functionsRead.editionContractURI({
+    template: "East Awesome Lead",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -197,21 +201,22 @@ sdk.functionsRead.editionContractURI({
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionContractVersionResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionContractVersion({
-  template: "Bespoke Clothing",
-}).then((res: EditionContractVersionResponse) => {
+  const res = await sdk.functionsRead.editionContractVersion({
+    template: "Bespoke Clothing",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -235,21 +240,22 @@ Get Default Royalty Info
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionGetDefaultRoyaltyInfoResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionGetDefaultRoyaltyInfo({
-  template: "Dubnium",
-}).then((res: EditionGetDefaultRoyaltyInfoResponse) => {
+  const res = await sdk.functionsRead.editionGetDefaultRoyaltyInfo({
+    template: "Dubnium",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -273,21 +279,22 @@ Flat platform fee information
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionGetFlatPlatformFeeInfoResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionGetFlatPlatformFeeInfo({
-  template: "Checking Benin Celsius",
-}).then((res: EditionGetFlatPlatformFeeInfoResponse) => {
+  const res = await sdk.functionsRead.editionGetFlatPlatformFeeInfo({
+    template: "Checking Benin Celsius",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -311,21 +318,22 @@ Get Platform Fee Info
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionGetPlatformFeeInfoResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionGetPlatformFeeInfo({
-  template: "Audi state",
-}).then((res: EditionGetPlatformFeeInfoResponse) => {
+  const res = await sdk.functionsRead.editionGetPlatformFeeInfo({
+    template: "Audi state",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -349,21 +357,22 @@ Platform fee information
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionGetPlatformFeeTypeResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionGetPlatformFeeType({
-  template: "seed",
-}).then((res: EditionGetPlatformFeeTypeResponse) => {
+  const res = await sdk.functionsRead.editionGetPlatformFeeType({
+    template: "seed",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -387,22 +396,23 @@ Get Role Admin
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionGetRoleAdminResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionGetRoleAdmin({
-  requestBody: {},
-  template: "airlift Recycled Peso",
-}).then((res: EditionGetRoleAdminResponse) => {
+  const res = await sdk.functionsRead.editionGetRoleAdmin({
+    requestBody: {},
+    template: "airlift Recycled Peso",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -426,22 +436,23 @@ Get Role Member
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionGetRoleMemberResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionGetRoleMember({
-  requestBody: {},
-  template: "National",
-}).then((res: EditionGetRoleMemberResponse) => {
+  const res = await sdk.functionsRead.editionGetRoleMember({
+    requestBody: {},
+    template: "National",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -465,22 +476,23 @@ Get Role Member Count
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionGetRoleMemberCountResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionGetRoleMemberCount({
-  requestBody: {},
-  template: "frame Atascocita Bedfordshire",
-}).then((res: EditionGetRoleMemberCountResponse) => {
+  const res = await sdk.functionsRead.editionGetRoleMemberCount({
+    requestBody: {},
+    template: "frame Atascocita Bedfordshire",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -504,22 +516,23 @@ Get Royalty Info for Token
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionGetRoyaltyInfoForTokenResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionGetRoyaltyInfoForToken({
-  requestBody: {},
-  template: "Modern West input",
-}).then((res: EditionGetRoyaltyInfoForTokenResponse) => {
+  const res = await sdk.functionsRead.editionGetRoyaltyInfoForToken({
+    requestBody: {},
+    template: "Modern West input",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -543,22 +556,23 @@ Has Role
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionHasRoleResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionHasRole({
-  requestBody: {},
-  template: "protocol",
-}).then((res: EditionHasRoleResponse) => {
+  const res = await sdk.functionsRead.editionHasRole({
+    requestBody: {},
+    template: "protocol",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -582,22 +596,23 @@ Is Approved for all
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionIsApprovedForAllResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionIsApprovedForAll({
-  requestBody: {},
-  template: "Direct mundane",
-}).then((res: EditionIsApprovedForAllResponse) => {
+  const res = await sdk.functionsRead.editionIsApprovedForAll({
+    requestBody: {},
+    template: "Direct mundane",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -621,22 +636,23 @@ Is Trusted Forwarder
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionIsTrustedForwarderResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionIsTrustedForwarder({
-  requestBody: {},
-  template: "application youthfully ampere",
-}).then((res: EditionIsTrustedForwarderResponse) => {
+  const res = await sdk.functionsRead.editionIsTrustedForwarder({
+    requestBody: {},
+    template: "application youthfully ampere",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -660,21 +676,22 @@ Name
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionNameResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionName({
-  template: "bandwidth",
-}).then((res: EditionNameResponse) => {
+  const res = await sdk.functionsRead.editionName({
+    template: "bandwidth",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -698,21 +715,22 @@ Next TokenId To Mint
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionNextTokenIdToMintResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionNextTokenIdToMint({
-  template: "Regional Norwalk Polonium",
-}).then((res: EditionNextTokenIdToMintResponse) => {
+  const res = await sdk.functionsRead.editionNextTokenIdToMint({
+    template: "Regional Norwalk Polonium",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -736,21 +754,22 @@ Operator Restriction
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionOperatorRestrictionResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionOperatorRestriction({
-  template: "yahoo",
-}).then((res: EditionOperatorRestrictionResponse) => {
+  const res = await sdk.functionsRead.editionOperatorRestriction({
+    template: "yahoo",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -774,21 +793,22 @@ Owner
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionOwnerResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionOwner({
-  template: "Pizza North",
-}).then((res: EditionOwnerResponse) => {
+  const res = await sdk.functionsRead.editionOwner({
+    template: "Pizza North",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -812,21 +832,22 @@ Recipient of platform fees
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionPlatformFeeRecipientResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionPlatformFeeRecipient({
-  template: "female Facilitator",
-}).then((res: EditionPlatformFeeRecipientResponse) => {
+  const res = await sdk.functionsRead.editionPlatformFeeRecipient({
+    template: "female Facilitator",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -850,21 +871,22 @@ Primary Sale Recipient
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionPrimarySaleRecipientResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionPrimarySaleRecipient({
-  template: "Northwest transition third",
-}).then((res: EditionPrimarySaleRecipientResponse) => {
+  const res = await sdk.functionsRead.editionPrimarySaleRecipient({
+    template: "Northwest transition third",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -888,22 +910,23 @@ Royalty Info
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionRoyaltyInfoResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionRoyaltyInfo({
-  requestBody: {},
-  template: "Kong Sausages",
-}).then((res: EditionRoyaltyInfoResponse) => {
+  const res = await sdk.functionsRead.editionRoyaltyInfo({
+    requestBody: {},
+    template: "Kong Sausages",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -927,22 +950,23 @@ Recipient of sales proceeds for a token
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionSaleRecipientForTokenResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionSaleRecipientForToken({
-  requestBody: {},
-  template: "regional North",
-}).then((res: EditionSaleRecipientForTokenResponse) => {
+  const res = await sdk.functionsRead.editionSaleRecipientForToken({
+    requestBody: {},
+    template: "regional North",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -966,22 +990,23 @@ Supports Interface
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionSupportsInterfaceResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionSupportsInterface({
-  requestBody: {},
-  template: "shoes",
-}).then((res: EditionSupportsInterfaceResponse) => {
+  const res = await sdk.functionsRead.editionSupportsInterface({
+    requestBody: {},
+    template: "shoes",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -1005,21 +1030,22 @@ Symbol
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionSymbolResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionSymbol({
-  template: "York Tesla",
-}).then((res: EditionSymbolResponse) => {
+  const res = await sdk.functionsRead.editionSymbol({
+    template: "York Tesla",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -1043,22 +1069,23 @@ Total Supply
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionTotalSupplyResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionTotalSupply({
-  requestBody: {},
-  template: "readily silver International",
-}).then((res: EditionTotalSupplyResponse) => {
+  const res = await sdk.functionsRead.editionTotalSupply({
+    requestBody: {},
+    template: "readily silver International",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -1082,22 +1109,23 @@ URI for a token
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionUriResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionUri({
-  requestBody: {},
-  template: "Rupee Solutions",
-}).then((res: EditionUriResponse) => {
+  const res = await sdk.functionsRead.editionUri({
+    requestBody: {},
+    template: "Rupee Solutions",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -1121,22 +1149,23 @@ Verifies a signature on a mint request
 
 ```typescript
 import { GlobalTest2 } from "global-test2";
-import { EditionVerifyResponse } from "global-test2/dist/sdk/models/operations";
 
-const sdk = new GlobalTest2({
-  security: {
-    default: "",
-  },
-});
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
 
-sdk.functionsRead.editionVerify({
-  requestBody: {},
-  template: "cyan Minivan",
-}).then((res: EditionVerifyResponse) => {
+  const res = await sdk.functionsRead.editionVerify({
+    requestBody: {},
+    template: "cyan Minivan",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
