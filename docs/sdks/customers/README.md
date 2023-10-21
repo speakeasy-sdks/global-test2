@@ -30,7 +30,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.customers.deleteCustomer({
-    customer: "IP deposit transmitting",
+    customer: "string",
   });
 
   if (res.statusCode == 200) {
@@ -69,7 +69,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.customers.getCustomer({
-    customer: "heuristic modulo",
+    customer: "string",
   });
 
   if (res.statusCode == 200) {
@@ -108,7 +108,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.customers.getProjectCustomers({
-    project: "Chief Chair",
+    project: "string",
   });
 
   if (res.statusCode == 200) {
@@ -151,7 +151,7 @@ import { GlobalTest2 } from "global-test2";
       customIdentifier: "org-user-123",
       metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
     },
-    project: "Branding",
+    project: "string",
   });
 
   if (res.statusCode == 200) {
@@ -192,10 +192,10 @@ import { GlobalTest2 } from "global-test2";
   const res = await sdk.customers.updateCustomer({
     updateCustomer: {
       customIdentifier: "org-user-123",
-      metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
+      metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"value\":\"value1\",\"key\":\"key1\"}]",
       thumb: "|RIpQ_8pxC" as bytes <<<>>>,
     },
-    customer: "anenst tangible",
+    customer: "string",
   });
 
   if (res.statusCode == 200) {

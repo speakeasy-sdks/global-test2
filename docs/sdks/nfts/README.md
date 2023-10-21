@@ -28,7 +28,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.nfTs.listNFTUsers({
-    template: "Diesel invoice",
+    template: "string",
     token: 1,
   });
 
@@ -68,7 +68,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.nfTs.listNFTs({
-    template: "primary Coupe Integration",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -107,7 +107,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.nfTs.showNFT({
-    template: "RAM Passenger",
+    template: "string",
     token: 1,
   });
 

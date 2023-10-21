@@ -54,7 +54,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionDEFAULTADMINROLE({
-    template: "Cisgender provided CLI",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -94,7 +94,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionBalanceOf({
     requestBody: {},
-    template: "Diesel Ameliorated",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -134,7 +134,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionBalanceOfBatch({
     requestBody: {},
-    template: "partnerships",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -173,7 +173,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionContractURI({
-    template: "East Awesome Lead",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -210,7 +210,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionContractVersion({
-    template: "Bespoke Clothing",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -249,7 +249,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionGetDefaultRoyaltyInfo({
-    template: "Dubnium",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -288,7 +288,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionGetFlatPlatformFeeInfo({
-    template: "Checking Benin Celsius",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -327,7 +327,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionGetPlatformFeeInfo({
-    template: "Audi state",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -366,7 +366,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionGetPlatformFeeType({
-    template: "seed",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -406,7 +406,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionGetRoleAdmin({
     requestBody: {},
-    template: "airlift Recycled Peso",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -446,7 +446,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionGetRoleMember({
     requestBody: {},
-    template: "National",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -486,7 +486,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionGetRoleMemberCount({
     requestBody: {},
-    template: "frame Atascocita Bedfordshire",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -526,7 +526,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionGetRoyaltyInfoForToken({
     requestBody: {},
-    template: "Modern West input",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -566,7 +566,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionHasRole({
     requestBody: {},
-    template: "protocol",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -606,7 +606,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionIsApprovedForAll({
     requestBody: {},
-    template: "Direct mundane",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -646,7 +646,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionIsTrustedForwarder({
     requestBody: {},
-    template: "application youthfully ampere",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -685,7 +685,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionName({
-    template: "bandwidth",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -724,7 +724,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionNextTokenIdToMint({
-    template: "Regional Norwalk Polonium",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -763,7 +763,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionOperatorRestriction({
-    template: "yahoo",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -802,7 +802,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionOwner({
-    template: "Pizza North",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -841,7 +841,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionPlatformFeeRecipient({
-    template: "female Facilitator",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -880,7 +880,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionPrimarySaleRecipient({
-    template: "Northwest transition third",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -920,7 +920,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionRoyaltyInfo({
     requestBody: {},
-    template: "Kong Sausages",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -960,7 +960,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionSaleRecipientForToken({
     requestBody: {},
-    template: "regional North",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1000,7 +1000,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionSupportsInterface({
     requestBody: {},
-    template: "shoes",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1039,7 +1039,7 @@ import { GlobalTest2 } from "global-test2";
   });
 
   const res = await sdk.functionsRead.editionSymbol({
-    template: "York Tesla",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1079,7 +1079,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionTotalSupply({
     requestBody: {},
-    template: "readily silver International",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1119,7 +1119,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionUri({
     requestBody: {},
-    template: "Rupee Solutions",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1159,7 +1159,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsRead.editionVerify({
     requestBody: {},
-    template: "cyan Minivan",
+    template: "string",
   });
 
   if (res.statusCode == 200) {

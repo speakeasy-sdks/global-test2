@@ -48,7 +48,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionBurn({
     requestBody: {},
-    template: "generate Arkansas",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -88,7 +88,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionBurnBatch({
     requestBody: {},
-    template: "Bicycle lux",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -128,7 +128,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionGrantRole({
     requestBody: {},
-    template: "League Northeast Beaumont",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -168,7 +168,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionInitialize({
     requestBody: {},
-    template: "Berkshire",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -208,7 +208,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionMintTo({
     requestBody: {},
-    template: "SMTP quantifying unleash",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -246,7 +246,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionMintWithSignature({
     requestBody: {},
-    template: "Savings",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -286,7 +286,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionMulticall({
     requestBody: {},
-    template: "Throughway",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -326,7 +326,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionRenounceRole({
     requestBody: {},
-    template: "Bedfordshire capacitor",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -366,7 +366,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionRevokeRole({
     requestBody: {},
-    template: "middleware inasmuch enim",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -406,7 +406,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSafeBatchTransferFrom({
     requestBody: {},
-    template: "Stage",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -446,7 +446,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSafeTransferFrom({
     requestBody: {},
-    template: "connecting Metrics Southwest",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -486,7 +486,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSetApprovalForAll({
     requestBody: {},
-    template: "female",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -526,7 +526,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSetContractURI({
     requestBody: {},
-    template: "argue red application",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -566,7 +566,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSetDefaultRoyaltyInfo({
     requestBody: {},
-    template: "Applications API Northeast",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -606,7 +606,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSetFlatPlatformFeeInfo({
     requestBody: {},
-    template: "slowly Washington",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -646,7 +646,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSetOperatorRestriction({
     requestBody: {},
-    template: "Account",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -686,7 +686,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSetOwner({
     requestBody: {},
-    template: "models Rubber supposing",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -726,7 +726,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSetPlatformFeeInfo({
     requestBody: {},
-    template: "programming Northeast",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -766,7 +766,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSetPlatformFeeType({
     requestBody: {},
-    template: "success",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -806,7 +806,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSetPrimarySaleRecipient({
     requestBody: {},
-    template: "Cambridgeshire Forest",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -846,7 +846,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSetRoyaltyInfoForToken({
     requestBody: {},
-    template: "compressing teaching until",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
@@ -886,7 +886,7 @@ import { GlobalTest2 } from "global-test2";
 
   const res = await sdk.functionsWrite.editionSubscribeToRegistry({
     requestBody: {},
-    template: "Music salmon International",
+    template: "string",
   });
 
   if (res.statusCode == 200) {
