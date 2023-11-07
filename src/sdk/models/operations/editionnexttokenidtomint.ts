@@ -21,12 +21,6 @@ export class EditionNextTokenIdToMintResponse extends SpeakeasyBase {
     contentType: string;
 
     /**
-     * Transaction submitted on chain!
-     */
-    @SpeakeasyMetadata()
-    editionNextTokenIdToMint200ApplicationJSONString?: string;
-
-    /**
      * HTTP response status code for this operation
      */
     @SpeakeasyMetadata()
@@ -37,4 +31,10 @@ export class EditionNextTokenIdToMintResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * Transaction submitted on chain!
+     */
+    @SpeakeasyMetadata()
+    res?: string;
 }

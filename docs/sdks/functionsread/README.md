@@ -1,5 +1,5 @@
 # FunctionsRead
-(*functionsRead*)
+(*.functionsRead*)
 
 ## Overview
 
@@ -57,6 +57,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -96,6 +97,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -137,6 +139,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -176,6 +179,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -212,6 +216,7 @@ import { GlobalTest2 } from "global-test2";
   const res = await sdk.functionsRead.editionContractVersion({
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -252,6 +257,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -290,6 +296,7 @@ import { GlobalTest2 } from "global-test2";
   const res = await sdk.functionsRead.editionGetFlatPlatformFeeInfo({
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -330,6 +337,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -368,6 +376,7 @@ import { GlobalTest2 } from "global-test2";
   const res = await sdk.functionsRead.editionGetPlatformFeeType({
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -409,6 +418,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -448,6 +458,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -489,6 +500,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -528,6 +540,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -569,6 +582,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -608,6 +622,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -649,6 +664,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -687,6 +703,7 @@ import { GlobalTest2 } from "global-test2";
   const res = await sdk.functionsRead.editionName({
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -727,6 +744,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -765,6 +783,7 @@ import { GlobalTest2 } from "global-test2";
   const res = await sdk.functionsRead.editionOperatorRestriction({
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -805,6 +824,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -844,6 +864,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -882,6 +903,7 @@ import { GlobalTest2 } from "global-test2";
   const res = await sdk.functionsRead.editionPrimarySaleRecipient({
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -923,6 +945,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -962,6 +985,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1003,6 +1027,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1041,6 +1066,7 @@ import { GlobalTest2 } from "global-test2";
   const res = await sdk.functionsRead.editionSymbol({
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1082,6 +1108,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1122,6 +1149,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1161,6 +1189,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

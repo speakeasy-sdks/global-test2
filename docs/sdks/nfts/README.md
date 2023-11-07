@@ -1,5 +1,5 @@
 # NFTs
-(*nfTs*)
+(*.nfTs*)
 
 ## Overview
 
@@ -31,6 +31,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
     token: 1,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -71,6 +72,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -110,6 +112,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
     token: 1,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

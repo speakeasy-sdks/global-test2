@@ -3,10 +3,10 @@
  */
 
 import * as utils from "../internal/utils";
+import * as shared from "../sdk/models/shared";
 import { Customers } from "./customers";
 import { FunctionsRead } from "./functionsread";
 import { FunctionsWrite } from "./functionswrite";
-import * as shared from "./models/shared";
 import { NFTs } from "./nfts";
 import axios from "axios";
 import { AxiosInstance } from "axios";
@@ -57,9 +57,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "0.7.0";
-    genVersion = "2.171.0";
-    userAgent = "speakeasy-sdk/typescript 0.7.0 2.171.0 1.0.0 global-test2";
+    sdkVersion = "0.8.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 0.8.0 2.181.1 1.0.0 global-test2";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -75,6 +75,10 @@ export class GlobalTest2 {
      */
     public customers: Customers;
     /**
+     * API Endpoints of NFTs
+     */
+    public nfTs: NFTs;
+    /**
      * All Edition's Read functions
      */
     public functionsRead: FunctionsRead;
@@ -82,10 +86,6 @@ export class GlobalTest2 {
      * All Edition's Write functions
      */
     public functionsWrite: FunctionsWrite;
-    /**
-     * API Endpoints of NFTs
-     */
-    public nfTs: NFTs;
 
     private sdkConfiguration: SDKConfiguration;
 
@@ -106,8 +106,8 @@ export class GlobalTest2 {
         });
 
         this.customers = new Customers(this.sdkConfiguration);
+        this.nfTs = new NFTs(this.sdkConfiguration);
         this.functionsRead = new FunctionsRead(this.sdkConfiguration);
         this.functionsWrite = new FunctionsWrite(this.sdkConfiguration);
-        this.nfTs = new NFTs(this.sdkConfiguration);
     }
 }

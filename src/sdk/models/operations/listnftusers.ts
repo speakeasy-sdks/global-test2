@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class ListNFTUsersRequest extends SpeakeasyBase {
@@ -28,12 +28,6 @@ export class ListNFTUsersResponse extends SpeakeasyBase {
     contentType: string;
 
     /**
-     * Successful operation
-     */
-    @SpeakeasyMetadata({ elemType: shared.NFTUser })
-    nftUsers?: shared.NFTUser[];
-
-    /**
      * HTTP response status code for this operation
      */
     @SpeakeasyMetadata()
@@ -44,4 +38,10 @@ export class ListNFTUsersResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * Successful operation
+     */
+    @SpeakeasyMetadata({ elemType: shared.NFTUser })
+    classes?: shared.NFTUser[];
 }

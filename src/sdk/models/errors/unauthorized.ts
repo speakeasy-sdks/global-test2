@@ -8,7 +8,7 @@ import { classToPlain, Expose, Type } from "class-transformer";
 /**
  * Error Data
  */
-export class UnauthorizedData extends SpeakeasyBase {}
+export class Data extends SpeakeasyBase {}
 
 /**
  * Unauthorized Response
@@ -19,8 +19,8 @@ export class Unauthorized extends Error {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "data" })
-    @Type(() => UnauthorizedData)
-    data?: UnauthorizedData;
+    @Type(() => Data)
+    data?: Data;
 
     /**
      * Error Code

@@ -8,7 +8,7 @@ import { Expose } from "class-transformer";
 /**
  * Status of the customer
  */
-export enum CustomerStatus {
+export enum Status {
     Active = "ACTIVE",
     Blocked = "BLOCKED",
 }
@@ -16,7 +16,7 @@ export enum CustomerStatus {
 /**
  * Wallet Connection of the customer
  */
-export enum CustomerWalletConnection {
+export enum WalletConnection {
     LegitWallet = "LEGIT_WALLET",
 }
 
@@ -92,7 +92,7 @@ export class Customer extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status?: CustomerStatus;
+    status?: Status;
 
     /**
      * Avatar of the customer
@@ -113,5 +113,5 @@ export class Customer extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "wallet_connection" })
-    walletConnection?: CustomerWalletConnection;
+    walletConnection?: WalletConnection;
 }

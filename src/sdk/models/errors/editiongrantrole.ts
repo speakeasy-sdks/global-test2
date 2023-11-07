@@ -9,7 +9,7 @@ import { classToPlain, Exclude, Expose } from "class-transformer";
 /**
  * Unauthorized!
  */
-export class EditionGrantRole401ApplicationJSON extends Error {
+export class EditionGrantRoleResponseBody extends Error {
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
@@ -33,7 +33,7 @@ export class EditionGrantRole401ApplicationJSON extends Error {
     @Expose({ name: "status_code" })
     statusCode?: number;
 
-    constructor(err?: EditionGrantRole401ApplicationJSON) {
+    constructor(err?: EditionGrantRoleResponseBody) {
         super();
         if (err) {
             Object.assign(this, err);
@@ -42,7 +42,7 @@ export class EditionGrantRole401ApplicationJSON extends Error {
             );
         }
 
-        this.name = "EditionGrantRole401ApplicationJSON";
-        Object.setPrototypeOf(this, EditionGrantRole401ApplicationJSON.prototype);
+        this.name = "EditionGrantRoleResponseBody";
+        Object.setPrototypeOf(this, EditionGrantRoleResponseBody.prototype);
     }
 }

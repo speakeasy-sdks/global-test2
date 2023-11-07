@@ -26,12 +26,6 @@ export class EditionSafeTransferFromResponse extends SpeakeasyBase {
     contentType: string;
 
     /**
-     * Transaction submitted on chain!
-     */
-    @SpeakeasyMetadata()
-    editionSafeTransferFrom200ApplicationJSONString?: string;
-
-    /**
      * HTTP response status code for this operation
      */
     @SpeakeasyMetadata()
@@ -42,4 +36,10 @@ export class EditionSafeTransferFromResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * Transaction submitted on chain!
+     */
+    @SpeakeasyMetadata()
+    res?: string;
 }

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class ListNFTsRequest extends SpeakeasyBase {
@@ -22,12 +22,6 @@ export class ListNFTsResponse extends SpeakeasyBase {
     contentType: string;
 
     /**
-     * Successful operation
-     */
-    @SpeakeasyMetadata({ elemType: shared.Nft })
-    nfts?: shared.Nft[];
-
-    /**
      * HTTP response status code for this operation
      */
     @SpeakeasyMetadata()
@@ -38,4 +32,10 @@ export class ListNFTsResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * Successful operation
+     */
+    @SpeakeasyMetadata({ elemType: shared.Nft })
+    classes?: shared.Nft[];
 }

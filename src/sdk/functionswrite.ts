@@ -3,9 +3,9 @@
  */
 
 import * as utils from "../internal/utils";
-import * as errors from "./models/errors";
-import * as operations from "./models/operations";
-import * as shared from "./models/shared";
+import * as errors from "../sdk/models/errors";
+import * as operations from "../sdk/models/operations";
+import * as shared from "../sdk/models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
@@ -93,7 +93,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionBurn200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -107,10 +107,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionBurn401ApplicationJSON
+                        errors.EditionBurnResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionBurn401ApplicationJSON(err);
+                    throw new errors.EditionBurnResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -206,7 +206,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionBurnBatch200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -220,10 +220,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionBurnBatch401ApplicationJSON
+                        errors.EditionBurnBatchResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionBurnBatch401ApplicationJSON(err);
+                    throw new errors.EditionBurnBatchResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -319,7 +319,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionGrantRole200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -333,10 +333,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionGrantRole401ApplicationJSON
+                        errors.EditionGrantRoleResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionGrantRole401ApplicationJSON(err);
+                    throw new errors.EditionGrantRoleResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -432,7 +432,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionInitialize200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -446,10 +446,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionInitialize401ApplicationJSON
+                        errors.EditionInitializeResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionInitialize401ApplicationJSON(err);
+                    throw new errors.EditionInitializeResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -545,7 +545,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionMintTo200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -559,10 +559,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionMintTo401ApplicationJSON
+                        errors.EditionMintToResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionMintTo401ApplicationJSON(err);
+                    throw new errors.EditionMintToResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -656,7 +656,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionMintWithSignature200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -670,10 +670,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionMintWithSignature401ApplicationJSON
+                        errors.EditionMintWithSignatureResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionMintWithSignature401ApplicationJSON(err);
+                    throw new errors.EditionMintWithSignatureResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -769,7 +769,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionMulticall200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -783,10 +783,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionMulticall401ApplicationJSON
+                        errors.EditionMulticallResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionMulticall401ApplicationJSON(err);
+                    throw new errors.EditionMulticallResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -883,7 +883,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionRenounceRole200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -897,10 +897,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionRenounceRole401ApplicationJSON
+                        errors.EditionRenounceRoleResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionRenounceRole401ApplicationJSON(err);
+                    throw new errors.EditionRenounceRoleResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -996,7 +996,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionRevokeRole200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1010,10 +1010,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionRevokeRole401ApplicationJSON
+                        errors.EditionRevokeRoleResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionRevokeRole401ApplicationJSON(err);
+                    throw new errors.EditionRevokeRoleResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1110,7 +1110,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSafeBatchTransferFrom200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1124,10 +1124,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSafeBatchTransferFrom401ApplicationJSON
+                        errors.EditionSafeBatchTransferFromResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSafeBatchTransferFrom401ApplicationJSON(err);
+                    throw new errors.EditionSafeBatchTransferFromResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1224,7 +1224,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSafeTransferFrom200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1238,10 +1238,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSafeTransferFrom401ApplicationJSON
+                        errors.EditionSafeTransferFromResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSafeTransferFrom401ApplicationJSON(err);
+                    throw new errors.EditionSafeTransferFromResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1338,7 +1338,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSetApprovalForAll200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1352,10 +1352,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSetApprovalForAll401ApplicationJSON
+                        errors.EditionSetApprovalForAllResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSetApprovalForAll401ApplicationJSON(err);
+                    throw new errors.EditionSetApprovalForAllResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1452,7 +1452,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSetContractURI200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1466,10 +1466,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSetContractUri401ApplicationJSON
+                        errors.EditionSetContractURIResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSetContractUri401ApplicationJSON(err);
+                    throw new errors.EditionSetContractURIResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1566,7 +1566,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSetDefaultRoyaltyInfo200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1580,10 +1580,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSetDefaultRoyaltyInfo401ApplicationJSON
+                        errors.EditionSetDefaultRoyaltyInfoResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSetDefaultRoyaltyInfo401ApplicationJSON(err);
+                    throw new errors.EditionSetDefaultRoyaltyInfoResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1680,7 +1680,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSetFlatPlatformFeeInfo200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1694,10 +1694,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSetFlatPlatformFeeInfo401ApplicationJSON
+                        errors.EditionSetFlatPlatformFeeInfoResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSetFlatPlatformFeeInfo401ApplicationJSON(err);
+                    throw new errors.EditionSetFlatPlatformFeeInfoResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1794,7 +1794,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSetOperatorRestriction200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1808,10 +1808,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSetOperatorRestriction401ApplicationJSON
+                        errors.EditionSetOperatorRestrictionResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSetOperatorRestriction401ApplicationJSON(err);
+                    throw new errors.EditionSetOperatorRestrictionResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1907,7 +1907,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSetOwner200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -1921,10 +1921,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSetOwner401ApplicationJSON
+                        errors.EditionSetOwnerResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSetOwner401ApplicationJSON(err);
+                    throw new errors.EditionSetOwnerResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2021,7 +2021,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSetPlatformFeeInfo200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2035,10 +2035,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSetPlatformFeeInfo401ApplicationJSON
+                        errors.EditionSetPlatformFeeInfoResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSetPlatformFeeInfo401ApplicationJSON(err);
+                    throw new errors.EditionSetPlatformFeeInfoResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2135,7 +2135,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSetPlatformFeeType200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2149,10 +2149,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSetPlatformFeeType401ApplicationJSON
+                        errors.EditionSetPlatformFeeTypeResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSetPlatformFeeType401ApplicationJSON(err);
+                    throw new errors.EditionSetPlatformFeeTypeResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2249,7 +2249,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSetPrimarySaleRecipient200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2263,10 +2263,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSetPrimarySaleRecipient401ApplicationJSON
+                        errors.EditionSetPrimarySaleRecipientResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSetPrimarySaleRecipient401ApplicationJSON(err);
+                    throw new errors.EditionSetPrimarySaleRecipientResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2363,7 +2363,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSetRoyaltyInfoForToken200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2377,10 +2377,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSetRoyaltyInfoForToken401ApplicationJSON
+                        errors.EditionSetRoyaltyInfoForTokenResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSetRoyaltyInfoForToken401ApplicationJSON(err);
+                    throw new errors.EditionSetRoyaltyInfoForTokenResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2477,7 +2477,7 @@ export class FunctionsWrite {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.editionSubscribeToRegistry200ApplicationJSONString = decodedRes;
+                    res.res = decodedRes;
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,
@@ -2491,10 +2491,10 @@ export class FunctionsWrite {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     const err = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        errors.EditionSubscribeToRegistry401ApplicationJSON
+                        errors.EditionSubscribeToRegistryResponseBody
                     );
                     err.rawResponse = httpRes;
-                    throw new errors.EditionSubscribeToRegistry401ApplicationJSON(err);
+                    throw new errors.EditionSubscribeToRegistryResponseBody(err);
                 } else {
                     throw new errors.SDKError(
                         "unknown content-type received: " + contentType,

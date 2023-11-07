@@ -1,5 +1,5 @@
 # Customers
-(*customers*)
+(*.customers*)
 
 ## Overview
 
@@ -32,6 +32,7 @@ import { GlobalTest2 } from "global-test2";
   const res = await sdk.customers.deleteCustomer({
     customer: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -72,6 +73,7 @@ import { GlobalTest2 } from "global-test2";
     customer: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -110,6 +112,7 @@ import { GlobalTest2 } from "global-test2";
   const res = await sdk.customers.getProjectCustomers({
     project: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -154,6 +157,7 @@ import { GlobalTest2 } from "global-test2";
     project: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -193,10 +197,11 @@ import { GlobalTest2 } from "global-test2";
     updateCustomer: {
       customIdentifier: "org-user-123",
       metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
-      thumb: "|RIpQ_8pxC" as bytes <<<>>>,
+      thumb: new TextEncoder().encode("0xFb9Cbe5CE8"),
     },
     customer: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

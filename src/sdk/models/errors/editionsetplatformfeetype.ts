@@ -9,7 +9,7 @@ import { classToPlain, Exclude, Expose } from "class-transformer";
 /**
  * Unauthorized!
  */
-export class EditionSetPlatformFeeType401ApplicationJSON extends Error {
+export class EditionSetPlatformFeeTypeResponseBody extends Error {
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
@@ -33,7 +33,7 @@ export class EditionSetPlatformFeeType401ApplicationJSON extends Error {
     @Expose({ name: "status_code" })
     statusCode?: number;
 
-    constructor(err?: EditionSetPlatformFeeType401ApplicationJSON) {
+    constructor(err?: EditionSetPlatformFeeTypeResponseBody) {
         super();
         if (err) {
             Object.assign(this, err);
@@ -42,7 +42,7 @@ export class EditionSetPlatformFeeType401ApplicationJSON extends Error {
             );
         }
 
-        this.name = "EditionSetPlatformFeeType401ApplicationJSON";
-        Object.setPrototypeOf(this, EditionSetPlatformFeeType401ApplicationJSON.prototype);
+        this.name = "EditionSetPlatformFeeTypeResponseBody";
+        Object.setPrototypeOf(this, EditionSetPlatformFeeTypeResponseBody.prototype);
     }
 }

@@ -1,5 +1,5 @@
 # FunctionsWrite
-(*functionsWrite*)
+(*.functionsWrite*)
 
 ## Overview
 
@@ -51,6 +51,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -90,6 +91,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -131,6 +133,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -170,6 +173,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -211,6 +215,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -248,6 +253,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -289,6 +295,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -328,6 +335,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -369,6 +377,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -408,6 +417,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -449,6 +459,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -488,6 +499,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -529,6 +541,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -568,6 +581,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -609,6 +623,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -648,6 +663,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -689,6 +705,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -728,6 +745,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -769,6 +787,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -808,6 +827,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -849,6 +869,7 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -888,6 +909,7 @@ import { GlobalTest2 } from "global-test2";
     requestBody: {},
     template: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

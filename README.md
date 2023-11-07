@@ -50,7 +50,7 @@ import { GlobalTest2 } from "global-test2";
 ## Available Resources and Operations
 
 
-### [customers](docs/sdks/customers/README.md)
+### [.customers](docs/sdks/customers/README.md)
 
 * [deleteCustomer](docs/sdks/customers/README.md#deletecustomer) - Delete Customer
 * [getCustomer](docs/sdks/customers/README.md#getcustomer) - View Customer
@@ -58,7 +58,13 @@ import { GlobalTest2 } from "global-test2";
 * [newCustomer](docs/sdks/customers/README.md#newcustomer) - Add a Customer
 * [updateCustomer](docs/sdks/customers/README.md#updatecustomer) - Update Customer
 
-### [functionsRead](docs/sdks/functionsread/README.md)
+### [.nfTs](docs/sdks/nfts/README.md)
+
+* [listNFTUsers](docs/sdks/nfts/README.md#listnftusers) - List all NFT Users
+* [listNFTs](docs/sdks/nfts/README.md#listnfts) - List all NFTs
+* [showNFT](docs/sdks/nfts/README.md#shownft) - Show a single NFTs
+
+### [.functionsRead](docs/sdks/functionsread/README.md)
 
 * [editionDEFAULTADMINROLE](docs/sdks/functionsread/README.md#editiondefaultadminrole) - Default Admin Role
 * [editionBalanceOf](docs/sdks/functionsread/README.md#editionbalanceof) - Balance of
@@ -90,7 +96,7 @@ import { GlobalTest2 } from "global-test2";
 * [editionUri](docs/sdks/functionsread/README.md#editionuri) - URI for a token	
 * [editionVerify](docs/sdks/functionsread/README.md#editionverify) - Verifies a signature on a mint request	
 
-### [functionsWrite](docs/sdks/functionswrite/README.md)
+### [.functionsWrite](docs/sdks/functionswrite/README.md)
 
 * [editionBurn](docs/sdks/functionswrite/README.md#editionburn) - Burn
 * [editionBurnBatch](docs/sdks/functionswrite/README.md#editionburnbatch) - Burns multiple tokens	
@@ -114,12 +120,6 @@ import { GlobalTest2 } from "global-test2";
 * [editionSetPrimarySaleRecipient](docs/sdks/functionswrite/README.md#editionsetprimarysalerecipient) - Set Primary Sale Recipient	
 * [editionSetRoyaltyInfoForToken](docs/sdks/functionswrite/README.md#editionsetroyaltyinfofortoken) - Set Royalty Info For Token	
 * [editionSubscribeToRegistry](docs/sdks/functionswrite/README.md#editionsubscribetoregistry) - Subscribe To Registry	
-
-### [nfTs](docs/sdks/nfts/README.md)
-
-* [listNFTUsers](docs/sdks/nfts/README.md#listnftusers) - List all NFT Users
-* [listNFTs](docs/sdks/nfts/README.md#listnfts) - List all NFTs
-* [showNFT](docs/sdks/nfts/README.md#shownft) - Show a single NFTs
 <!-- End SDK Available Operations -->
 
 
@@ -139,6 +139,174 @@ return value of `next` is `null`, then there are no more pages to be fetched.
 
 Here's an example of one such pagination call:
 <!-- End Pagination -->
+
+
+
+<!-- Start Error Handling -->
+# Error Handling
+
+Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+
+## Example
+
+```typescript
+import { GlobalTest2 } from "global-test2";
+
+(async() => {
+  const sdk = new GlobalTest2({
+    security: {
+      default: "",
+    },
+  });
+
+  
+  let res;
+  try {
+    res = await sdk.customers.deleteCustomer({
+    customer: "string",
+  });
+  } catch (e) { 
+    if (e instanceof Unauthorized) {
+      console.error(e) // handle exception 
+    
+  }
+
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+<!-- End Error Handling -->
+
+
+
+<!-- Start Server Selection -->
+# Server Selection
+
+## Select Server by Index
+
+You can override the default server globally by passing a server index to the `serverIdx: number` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `http://legit.test:8000/v1` | None |
+
+For example:
+
+```typescript
+import { GlobalTest2 } from "global-test2";
+
+(async () => {
+    const sdk = new GlobalTest2({
+        serverIdx: 0,
+        security: {
+            default: "",
+        },
+    });
+
+    const res = await sdk.customers.deleteCustomer({
+        customer: "string",
+    });
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+
+
+## Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
+
+```typescript
+import { GlobalTest2 } from "global-test2";
+
+(async () => {
+    const sdk = new GlobalTest2({
+        serverURL: "http://legit.test:8000/v1",
+        security: {
+            default: "",
+        },
+    });
+
+    const res = await sdk.customers.deleteCustomer({
+        customer: "string",
+    });
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+<!-- End Server Selection -->
+
+
+
+<!-- Start Custom HTTP Client -->
+# Custom HTTP Client
+
+The Typescript SDK makes API calls using the (axios)[https://axios-http.com/docs/intro] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
+
+
+For example, you could specify a header for every request that your sdk makes as follows:
+
+```typescript
+from global-test2 import GlobalTest2;
+import axios;
+
+const httpClient = axios.create({
+    headers: {'x-custom-header': 'someValue'}
+})
+
+
+const sdk = new GlobalTest2({defaultClient: httpClient});
+```
+
+
+<!-- End Custom HTTP Client -->
+
+
+
+<!-- Start Authentication -->
+
+# Authentication
+
+## Per-Client Security Schemes
+
+Your SDK supports the following security scheme globally:
+
+| Name        | Type        | Scheme      |
+| ----------- | ----------- | ----------- |
+| `default`   | http        | HTTP Bearer |
+
+You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
+
+```typescript
+import { GlobalTest2 } from "global-test2";
+
+(async () => {
+    const sdk = new GlobalTest2({
+        security: {
+            default: "",
+        },
+    });
+
+    const res = await sdk.customers.deleteCustomer({
+        customer: "string",
+    });
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+<!-- End Authentication -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

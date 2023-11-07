@@ -53,6 +53,5 @@ export * from "./editionsymbol";
 export * from "./editiontotalsupply";
 export * from "./editionuri";
 export * from "./editionverify";
-export * from "./unauthorized";
-
 export * from "./sdkerror";
+export * from "./unauthorized";

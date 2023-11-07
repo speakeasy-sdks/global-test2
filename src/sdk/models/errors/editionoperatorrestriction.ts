@@ -9,7 +9,7 @@ import { classToPlain, Exclude, Expose } from "class-transformer";
 /**
  * Unauthorized!
  */
-export class EditionOperatorRestriction401ApplicationJSON extends Error {
+export class EditionOperatorRestrictionResponseBody extends Error {
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
@@ -33,7 +33,7 @@ export class EditionOperatorRestriction401ApplicationJSON extends Error {
     @Expose({ name: "status_code" })
     statusCode?: number;
 
-    constructor(err?: EditionOperatorRestriction401ApplicationJSON) {
+    constructor(err?: EditionOperatorRestrictionResponseBody) {
         super();
         if (err) {
             Object.assign(this, err);
@@ -42,7 +42,7 @@ export class EditionOperatorRestriction401ApplicationJSON extends Error {
             );
         }
 
-        this.name = "EditionOperatorRestriction401ApplicationJSON";
-        Object.setPrototypeOf(this, EditionOperatorRestriction401ApplicationJSON.prototype);
+        this.name = "EditionOperatorRestrictionResponseBody";
+        Object.setPrototypeOf(this, EditionOperatorRestrictionResponseBody.prototype);
     }
 }
