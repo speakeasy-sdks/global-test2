@@ -1,9 +1,0 @@
-# EditionSubscribeToRegistryRequest
-
-
-## Fields
-
-| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `requestBody`                                                                                                        | [operations.EditionSubscribeToRegistryRequestBody](../../models/operations/editionsubscribetoregistryrequestbody.md) | :heavy_minus_sign:                                                                                                   | N/A                                                                                                                  |
-| `template`                                                                                                           | *string*                                                                                                             | :heavy_check_mark:                                                                                                   | Template id                                                                                                          |

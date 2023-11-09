@@ -1,5 +1,5 @@
 # FunctionsRead
-(*.functionsRead*)
+(*functionsRead*)
 
 ## Overview
 
@@ -57,7 +57,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -66,16 +65,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.EditionDEFAULTADMINROLERequest](../../models/operations/editiondefaultadminrolerequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.EditionDEFAULTADMINROLERequest](../../sdk/models/operations/editiondefaultadminrolerequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
 
-**Promise<[operations.EditionDEFAULTADMINROLEResponse](../../models/operations/editiondefaultadminroleresponse.md)>**
+**Promise<[operations.EditionDEFAULTADMINROLEResponse](../../sdk/models/operations/editiondefaultadminroleresponse.md)>**
+### Errors
 
+| Error Object                               | Status Code                                | Content Type                               |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| errors.EditionDEFAULTADMINROLEResponseBody | 401                                        | application/json                           |
+| errors.SDKError                            | 400-600                                    | */*                                        |
 
 ## editionBalanceOf
 
@@ -98,7 +102,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -107,16 +110,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.EditionBalanceOfRequest](../../models/operations/editionbalanceofrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.EditionBalanceOfRequest](../../sdk/models/operations/editionbalanceofrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
 
 
 ### Response
 
-**Promise<[operations.EditionBalanceOfResponse](../../models/operations/editionbalanceofresponse.md)>**
+**Promise<[operations.EditionBalanceOfResponse](../../sdk/models/operations/editionbalanceofresponse.md)>**
+### Errors
 
+| Error Object                        | Status Code                         | Content Type                        |
+| ----------------------------------- | ----------------------------------- | ----------------------------------- |
+| errors.EditionBalanceOfResponseBody | 401                                 | application/json                    |
+| errors.SDKError                     | 400-600                             | */*                                 |
 
 ## editionBalanceOfBatch
 
@@ -139,7 +147,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -148,16 +155,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.EditionBalanceOfBatchRequest](../../models/operations/editionbalanceofbatchrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.EditionBalanceOfBatchRequest](../../sdk/models/operations/editionbalanceofbatchrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
 
 
 ### Response
 
-**Promise<[operations.EditionBalanceOfBatchResponse](../../models/operations/editionbalanceofbatchresponse.md)>**
+**Promise<[operations.EditionBalanceOfBatchResponse](../../sdk/models/operations/editionbalanceofbatchresponse.md)>**
+### Errors
 
+| Error Object                             | Status Code                              | Content Type                             |
+| ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| errors.EditionBalanceOfBatchResponseBody | 401                                      | application/json                         |
+| errors.SDKError                          | 400-600                                  | */*                                      |
 
 ## editionContractURI
 
@@ -179,7 +191,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -188,16 +199,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.EditionContractURIRequest](../../models/operations/editioncontracturirequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.EditionContractURIRequest](../../sdk/models/operations/editioncontracturirequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
 
-**Promise<[operations.EditionContractURIResponse](../../models/operations/editioncontracturiresponse.md)>**
+**Promise<[operations.EditionContractURIResponse](../../sdk/models/operations/editioncontracturiresponse.md)>**
+### Errors
 
+| Error Object                          | Status Code                           | Content Type                          |
+| ------------------------------------- | ------------------------------------- | ------------------------------------- |
+| errors.EditionContractURIResponseBody | 401                                   | application/json                      |
+| errors.SDKError                       | 400-600                               | */*                                   |
 
 ## editionContractVersion
 
@@ -217,7 +233,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -226,16 +241,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.EditionContractVersionRequest](../../models/operations/editioncontractversionrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.EditionContractVersionRequest](../../sdk/models/operations/editioncontractversionrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
 
 
 ### Response
 
-**Promise<[operations.EditionContractVersionResponse](../../models/operations/editioncontractversionresponse.md)>**
+**Promise<[operations.EditionContractVersionResponse](../../sdk/models/operations/editioncontractversionresponse.md)>**
+### Errors
 
+| Error Object                              | Status Code                               | Content Type                              |
+| ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| errors.EditionContractVersionResponseBody | 401                                       | application/json                          |
+| errors.SDKError                           | 400-600                                   | */*                                       |
 
 ## editionGetDefaultRoyaltyInfo
 
@@ -257,7 +277,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -266,16 +285,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.EditionGetDefaultRoyaltyInfoRequest](../../models/operations/editiongetdefaultroyaltyinforequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.EditionGetDefaultRoyaltyInfoRequest](../../sdk/models/operations/editiongetdefaultroyaltyinforequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.EditionGetDefaultRoyaltyInfoResponse](../../models/operations/editiongetdefaultroyaltyinforesponse.md)>**
+**Promise<[operations.EditionGetDefaultRoyaltyInfoResponse](../../sdk/models/operations/editiongetdefaultroyaltyinforesponse.md)>**
+### Errors
 
+| Error Object                                    | Status Code                                     | Content Type                                    |
+| ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
+| errors.EditionGetDefaultRoyaltyInfoResponseBody | 401                                             | application/json                                |
+| errors.SDKError                                 | 400-600                                         | */*                                             |
 
 ## editionGetFlatPlatformFeeInfo
 
@@ -297,7 +321,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -306,16 +329,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.EditionGetFlatPlatformFeeInfoRequest](../../models/operations/editiongetflatplatformfeeinforequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.EditionGetFlatPlatformFeeInfoRequest](../../sdk/models/operations/editiongetflatplatformfeeinforequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
 
 
 ### Response
 
-**Promise<[operations.EditionGetFlatPlatformFeeInfoResponse](../../models/operations/editiongetflatplatformfeeinforesponse.md)>**
+**Promise<[operations.EditionGetFlatPlatformFeeInfoResponse](../../sdk/models/operations/editiongetflatplatformfeeinforesponse.md)>**
+### Errors
 
+| Error Object                                     | Status Code                                      | Content Type                                     |
+| ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
+| errors.EditionGetFlatPlatformFeeInfoResponseBody | 401                                              | application/json                                 |
+| errors.SDKError                                  | 400-600                                          | */*                                              |
 
 ## editionGetPlatformFeeInfo
 
@@ -337,7 +365,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -346,16 +373,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.EditionGetPlatformFeeInfoRequest](../../models/operations/editiongetplatformfeeinforequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.EditionGetPlatformFeeInfoRequest](../../sdk/models/operations/editiongetplatformfeeinforequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.EditionGetPlatformFeeInfoResponse](../../models/operations/editiongetplatformfeeinforesponse.md)>**
+**Promise<[operations.EditionGetPlatformFeeInfoResponse](../../sdk/models/operations/editiongetplatformfeeinforesponse.md)>**
+### Errors
 
+| Error Object                                 | Status Code                                  | Content Type                                 |
+| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
+| errors.EditionGetPlatformFeeInfoResponseBody | 401                                          | application/json                             |
+| errors.SDKError                              | 400-600                                      | */*                                          |
 
 ## editionGetPlatformFeeType
 
@@ -377,7 +409,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -386,16 +417,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.EditionGetPlatformFeeTypeRequest](../../models/operations/editiongetplatformfeetyperequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.EditionGetPlatformFeeTypeRequest](../../sdk/models/operations/editiongetplatformfeetyperequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.EditionGetPlatformFeeTypeResponse](../../models/operations/editiongetplatformfeetyperesponse.md)>**
+**Promise<[operations.EditionGetPlatformFeeTypeResponse](../../sdk/models/operations/editiongetplatformfeetyperesponse.md)>**
+### Errors
 
+| Error Object                                 | Status Code                                  | Content Type                                 |
+| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
+| errors.EditionGetPlatformFeeTypeResponseBody | 401                                          | application/json                             |
+| errors.SDKError                              | 400-600                                      | */*                                          |
 
 ## editionGetRoleAdmin
 
@@ -418,7 +454,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -427,16 +462,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.EditionGetRoleAdminRequest](../../models/operations/editiongetroleadminrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.EditionGetRoleAdminRequest](../../sdk/models/operations/editiongetroleadminrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.EditionGetRoleAdminResponse](../../models/operations/editiongetroleadminresponse.md)>**
+**Promise<[operations.EditionGetRoleAdminResponse](../../sdk/models/operations/editiongetroleadminresponse.md)>**
+### Errors
 
+| Error Object                           | Status Code                            | Content Type                           |
+| -------------------------------------- | -------------------------------------- | -------------------------------------- |
+| errors.EditionGetRoleAdminResponseBody | 401                                    | application/json                       |
+| errors.SDKError                        | 400-600                                | */*                                    |
 
 ## editionGetRoleMember
 
@@ -459,7 +499,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -468,16 +507,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.EditionGetRoleMemberRequest](../../models/operations/editiongetrolememberrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.EditionGetRoleMemberRequest](../../sdk/models/operations/editiongetrolememberrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.EditionGetRoleMemberResponse](../../models/operations/editiongetrolememberresponse.md)>**
+**Promise<[operations.EditionGetRoleMemberResponse](../../sdk/models/operations/editiongetrolememberresponse.md)>**
+### Errors
 
+| Error Object                            | Status Code                             | Content Type                            |
+| --------------------------------------- | --------------------------------------- | --------------------------------------- |
+| errors.EditionGetRoleMemberResponseBody | 401                                     | application/json                        |
+| errors.SDKError                         | 400-600                                 | */*                                     |
 
 ## editionGetRoleMemberCount
 
@@ -500,7 +544,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -509,16 +552,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.EditionGetRoleMemberCountRequest](../../models/operations/editiongetrolemembercountrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.EditionGetRoleMemberCountRequest](../../sdk/models/operations/editiongetrolemembercountrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.EditionGetRoleMemberCountResponse](../../models/operations/editiongetrolemembercountresponse.md)>**
+**Promise<[operations.EditionGetRoleMemberCountResponse](../../sdk/models/operations/editiongetrolemembercountresponse.md)>**
+### Errors
 
+| Error Object                                 | Status Code                                  | Content Type                                 |
+| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
+| errors.EditionGetRoleMemberCountResponseBody | 401                                          | application/json                             |
+| errors.SDKError                              | 400-600                                      | */*                                          |
 
 ## editionGetRoyaltyInfoForToken
 
@@ -541,7 +589,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -550,16 +597,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.EditionGetRoyaltyInfoForTokenRequest](../../models/operations/editiongetroyaltyinfofortokenrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.EditionGetRoyaltyInfoForTokenRequest](../../sdk/models/operations/editiongetroyaltyinfofortokenrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
 
 
 ### Response
 
-**Promise<[operations.EditionGetRoyaltyInfoForTokenResponse](../../models/operations/editiongetroyaltyinfofortokenresponse.md)>**
+**Promise<[operations.EditionGetRoyaltyInfoForTokenResponse](../../sdk/models/operations/editiongetroyaltyinfofortokenresponse.md)>**
+### Errors
 
+| Error Object                                     | Status Code                                      | Content Type                                     |
+| ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
+| errors.EditionGetRoyaltyInfoForTokenResponseBody | 401                                              | application/json                                 |
+| errors.SDKError                                  | 400-600                                          | */*                                              |
 
 ## editionHasRole
 
@@ -582,7 +634,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -591,16 +642,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.EditionHasRoleRequest](../../models/operations/editionhasrolerequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.EditionHasRoleRequest](../../sdk/models/operations/editionhasrolerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
 
 
 ### Response
 
-**Promise<[operations.EditionHasRoleResponse](../../models/operations/editionhasroleresponse.md)>**
+**Promise<[operations.EditionHasRoleResponse](../../sdk/models/operations/editionhasroleresponse.md)>**
+### Errors
 
+| Error Object                      | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| errors.EditionHasRoleResponseBody | 401                               | application/json                  |
+| errors.SDKError                   | 400-600                           | */*                               |
 
 ## editionIsApprovedForAll
 
@@ -623,7 +679,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -632,16 +687,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.EditionIsApprovedForAllRequest](../../models/operations/editionisapprovedforallrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.EditionIsApprovedForAllRequest](../../sdk/models/operations/editionisapprovedforallrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
 
-**Promise<[operations.EditionIsApprovedForAllResponse](../../models/operations/editionisapprovedforallresponse.md)>**
+**Promise<[operations.EditionIsApprovedForAllResponse](../../sdk/models/operations/editionisapprovedforallresponse.md)>**
+### Errors
 
+| Error Object                               | Status Code                                | Content Type                               |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| errors.EditionIsApprovedForAllResponseBody | 401                                        | application/json                           |
+| errors.SDKError                            | 400-600                                    | */*                                        |
 
 ## editionIsTrustedForwarder
 
@@ -664,7 +724,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -673,16 +732,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.EditionIsTrustedForwarderRequest](../../models/operations/editionistrustedforwarderrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.EditionIsTrustedForwarderRequest](../../sdk/models/operations/editionistrustedforwarderrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.EditionIsTrustedForwarderResponse](../../models/operations/editionistrustedforwarderresponse.md)>**
+**Promise<[operations.EditionIsTrustedForwarderResponse](../../sdk/models/operations/editionistrustedforwarderresponse.md)>**
+### Errors
 
+| Error Object                                 | Status Code                                  | Content Type                                 |
+| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
+| errors.EditionIsTrustedForwarderResponseBody | 401                                          | application/json                             |
+| errors.SDKError                              | 400-600                                      | */*                                          |
 
 ## editionName
 
@@ -704,7 +768,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -713,16 +776,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.EditionNameRequest](../../models/operations/editionnamerequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.EditionNameRequest](../../sdk/models/operations/editionnamerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
 
-**Promise<[operations.EditionNameResponse](../../models/operations/editionnameresponse.md)>**
+**Promise<[operations.EditionNameResponse](../../sdk/models/operations/editionnameresponse.md)>**
+### Errors
 
+| Error Object                   | Status Code                    | Content Type                   |
+| ------------------------------ | ------------------------------ | ------------------------------ |
+| errors.EditionNameResponseBody | 401                            | application/json               |
+| errors.SDKError                | 400-600                        | */*                            |
 
 ## editionNextTokenIdToMint
 
@@ -744,7 +812,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -753,16 +820,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.EditionNextTokenIdToMintRequest](../../models/operations/editionnexttokenidtomintrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.EditionNextTokenIdToMintRequest](../../sdk/models/operations/editionnexttokenidtomintrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response
 
-**Promise<[operations.EditionNextTokenIdToMintResponse](../../models/operations/editionnexttokenidtomintresponse.md)>**
+**Promise<[operations.EditionNextTokenIdToMintResponse](../../sdk/models/operations/editionnexttokenidtomintresponse.md)>**
+### Errors
 
+| Error Object                                | Status Code                                 | Content Type                                |
+| ------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
+| errors.EditionNextTokenIdToMintResponseBody | 401                                         | application/json                            |
+| errors.SDKError                             | 400-600                                     | */*                                         |
 
 ## editionOperatorRestriction
 
@@ -784,7 +856,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -793,16 +864,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.EditionOperatorRestrictionRequest](../../models/operations/editionoperatorrestrictionrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.EditionOperatorRestrictionRequest](../../sdk/models/operations/editionoperatorrestrictionrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response
 
-**Promise<[operations.EditionOperatorRestrictionResponse](../../models/operations/editionoperatorrestrictionresponse.md)>**
+**Promise<[operations.EditionOperatorRestrictionResponse](../../sdk/models/operations/editionoperatorrestrictionresponse.md)>**
+### Errors
 
+| Error Object                                  | Status Code                                   | Content Type                                  |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| errors.EditionOperatorRestrictionResponseBody | 401                                           | application/json                              |
+| errors.SDKError                               | 400-600                                       | */*                                           |
 
 ## editionOwner
 
@@ -824,7 +900,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -833,16 +908,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.EditionOwnerRequest](../../models/operations/editionownerrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.EditionOwnerRequest](../../sdk/models/operations/editionownerrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response
 
-**Promise<[operations.EditionOwnerResponse](../../models/operations/editionownerresponse.md)>**
+**Promise<[operations.EditionOwnerResponse](../../sdk/models/operations/editionownerresponse.md)>**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.EditionOwnerResponseBody | 401                             | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## editionPlatformFeeRecipient
 
@@ -864,7 +944,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -873,16 +952,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.EditionPlatformFeeRecipientRequest](../../models/operations/editionplatformfeerecipientrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.EditionPlatformFeeRecipientRequest](../../sdk/models/operations/editionplatformfeerecipientrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.EditionPlatformFeeRecipientResponse](../../models/operations/editionplatformfeerecipientresponse.md)>**
+**Promise<[operations.EditionPlatformFeeRecipientResponse](../../sdk/models/operations/editionplatformfeerecipientresponse.md)>**
+### Errors
 
+| Error Object                                   | Status Code                                    | Content Type                                   |
+| ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
+| errors.EditionPlatformFeeRecipientResponseBody | 401                                            | application/json                               |
+| errors.SDKError                                | 400-600                                        | */*                                            |
 
 ## editionPrimarySaleRecipient
 
@@ -904,7 +988,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -913,16 +996,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.EditionPrimarySaleRecipientRequest](../../models/operations/editionprimarysalerecipientrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.EditionPrimarySaleRecipientRequest](../../sdk/models/operations/editionprimarysalerecipientrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.EditionPrimarySaleRecipientResponse](../../models/operations/editionprimarysalerecipientresponse.md)>**
+**Promise<[operations.EditionPrimarySaleRecipientResponse](../../sdk/models/operations/editionprimarysalerecipientresponse.md)>**
+### Errors
 
+| Error Object                                   | Status Code                                    | Content Type                                   |
+| ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
+| errors.EditionPrimarySaleRecipientResponseBody | 401                                            | application/json                               |
+| errors.SDKError                                | 400-600                                        | */*                                            |
 
 ## editionRoyaltyInfo
 
@@ -945,7 +1033,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -954,16 +1041,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.EditionRoyaltyInfoRequest](../../models/operations/editionroyaltyinforequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.EditionRoyaltyInfoRequest](../../sdk/models/operations/editionroyaltyinforequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
 
-**Promise<[operations.EditionRoyaltyInfoResponse](../../models/operations/editionroyaltyinforesponse.md)>**
+**Promise<[operations.EditionRoyaltyInfoResponse](../../sdk/models/operations/editionroyaltyinforesponse.md)>**
+### Errors
 
+| Error Object                          | Status Code                           | Content Type                          |
+| ------------------------------------- | ------------------------------------- | ------------------------------------- |
+| errors.EditionRoyaltyInfoResponseBody | 401                                   | application/json                      |
+| errors.SDKError                       | 400-600                               | */*                                   |
 
 ## editionSaleRecipientForToken
 
@@ -986,7 +1078,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -995,16 +1086,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.EditionSaleRecipientForTokenRequest](../../models/operations/editionsalerecipientfortokenrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.EditionSaleRecipientForTokenRequest](../../sdk/models/operations/editionsalerecipientfortokenrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.EditionSaleRecipientForTokenResponse](../../models/operations/editionsalerecipientfortokenresponse.md)>**
+**Promise<[operations.EditionSaleRecipientForTokenResponse](../../sdk/models/operations/editionsalerecipientfortokenresponse.md)>**
+### Errors
 
+| Error Object                                    | Status Code                                     | Content Type                                    |
+| ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
+| errors.EditionSaleRecipientForTokenResponseBody | 401                                             | application/json                                |
+| errors.SDKError                                 | 400-600                                         | */*                                             |
 
 ## editionSupportsInterface
 
@@ -1027,7 +1123,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1036,16 +1131,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.EditionSupportsInterfaceRequest](../../models/operations/editionsupportsinterfacerequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.EditionSupportsInterfaceRequest](../../sdk/models/operations/editionsupportsinterfacerequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response
 
-**Promise<[operations.EditionSupportsInterfaceResponse](../../models/operations/editionsupportsinterfaceresponse.md)>**
+**Promise<[operations.EditionSupportsInterfaceResponse](../../sdk/models/operations/editionsupportsinterfaceresponse.md)>**
+### Errors
 
+| Error Object                                | Status Code                                 | Content Type                                |
+| ------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
+| errors.EditionSupportsInterfaceResponseBody | 401                                         | application/json                            |
+| errors.SDKError                             | 400-600                                     | */*                                         |
 
 ## editionSymbol
 
@@ -1067,7 +1167,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1076,16 +1175,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.EditionSymbolRequest](../../models/operations/editionsymbolrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.EditionSymbolRequest](../../sdk/models/operations/editionsymbolrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
 
 
 ### Response
 
-**Promise<[operations.EditionSymbolResponse](../../models/operations/editionsymbolresponse.md)>**
+**Promise<[operations.EditionSymbolResponse](../../sdk/models/operations/editionsymbolresponse.md)>**
+### Errors
 
+| Error Object                     | Status Code                      | Content Type                     |
+| -------------------------------- | -------------------------------- | -------------------------------- |
+| errors.EditionSymbolResponseBody | 401                              | application/json                 |
+| errors.SDKError                  | 400-600                          | */*                              |
 
 ## editionTotalSupply
 
@@ -1108,7 +1212,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1117,16 +1220,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.EditionTotalSupplyRequest](../../models/operations/editiontotalsupplyrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.EditionTotalSupplyRequest](../../sdk/models/operations/editiontotalsupplyrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
 
-**Promise<[operations.EditionTotalSupplyResponse](../../models/operations/editiontotalsupplyresponse.md)>**
+**Promise<[operations.EditionTotalSupplyResponse](../../sdk/models/operations/editiontotalsupplyresponse.md)>**
+### Errors
 
+| Error Object                          | Status Code                           | Content Type                          |
+| ------------------------------------- | ------------------------------------- | ------------------------------------- |
+| errors.EditionTotalSupplyResponseBody | 401                                   | application/json                      |
+| errors.SDKError                       | 400-600                               | */*                                   |
 
 ## editionUri
 
@@ -1149,7 +1257,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1158,16 +1265,21 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.EditionUriRequest](../../models/operations/editionurirequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.EditionUriRequest](../../sdk/models/operations/editionurirequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
 
 
 ### Response
 
-**Promise<[operations.EditionUriResponse](../../models/operations/editionuriresponse.md)>**
+**Promise<[operations.EditionUriResponse](../../sdk/models/operations/editionuriresponse.md)>**
+### Errors
 
+| Error Object                  | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| errors.EditionUriResponseBody | 401                           | application/json              |
+| errors.SDKError               | 400-600                       | */*                           |
 
 ## editionVerify
 
@@ -1190,7 +1302,6 @@ import { GlobalTest2 } from "global-test2";
     template: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1199,13 +1310,18 @@ import { GlobalTest2 } from "global-test2";
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.EditionVerifyRequest](../../models/operations/editionverifyrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.EditionVerifyRequest](../../sdk/models/operations/editionverifyrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
 
 
 ### Response
 
-**Promise<[operations.EditionVerifyResponse](../../models/operations/editionverifyresponse.md)>**
+**Promise<[operations.EditionVerifyResponse](../../sdk/models/operations/editionverifyresponse.md)>**
+### Errors
 
+| Error Object                     | Status Code                      | Content Type                     |
+| -------------------------------- | -------------------------------- | -------------------------------- |
+| errors.EditionVerifyResponseBody | 401                              | application/json                 |
+| errors.SDKError                  | 400-600                          | */*                              |

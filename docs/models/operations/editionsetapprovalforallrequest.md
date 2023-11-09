@@ -1,9 +1,0 @@
-# EditionSetApprovalForAllRequest
-
-
-## Fields
-
-| Field                                                                                                            | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `requestBody`                                                                                                    | [operations.EditionSetApprovalForAllRequestBody](../../models/operations/editionsetapprovalforallrequestbody.md) | :heavy_minus_sign:                                                                                               | N/A                                                                                                              |
-| `template`                                                                                                       | *string*                                                                                                         | :heavy_check_mark:                                                                                               | Template id                                                                                                      |

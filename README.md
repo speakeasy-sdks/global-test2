@@ -50,7 +50,7 @@ import { GlobalTest2 } from "global-test2";
 ## Available Resources and Operations
 
 
-### [.customers](docs/sdks/customers/README.md)
+### [customers](docs/sdks/customers/README.md)
 
 * [deleteCustomer](docs/sdks/customers/README.md#deletecustomer) - Delete Customer
 * [getCustomer](docs/sdks/customers/README.md#getcustomer) - View Customer
@@ -58,13 +58,13 @@ import { GlobalTest2 } from "global-test2";
 * [newCustomer](docs/sdks/customers/README.md#newcustomer) - Add a Customer
 * [updateCustomer](docs/sdks/customers/README.md#updatecustomer) - Update Customer
 
-### [.nfTs](docs/sdks/nfts/README.md)
+### [nfTs](docs/sdks/nfts/README.md)
 
 * [listNFTUsers](docs/sdks/nfts/README.md#listnftusers) - List all NFT Users
 * [listNFTs](docs/sdks/nfts/README.md#listnfts) - List all NFTs
 * [showNFT](docs/sdks/nfts/README.md#shownft) - Show a single NFTs
 
-### [.functionsRead](docs/sdks/functionsread/README.md)
+### [functionsRead](docs/sdks/functionsread/README.md)
 
 * [editionDEFAULTADMINROLE](docs/sdks/functionsread/README.md#editiondefaultadminrole) - Default Admin Role
 * [editionBalanceOf](docs/sdks/functionsread/README.md#editionbalanceof) - Balance of
@@ -96,7 +96,7 @@ import { GlobalTest2 } from "global-test2";
 * [editionUri](docs/sdks/functionsread/README.md#editionuri) - URI for a token	
 * [editionVerify](docs/sdks/functionsread/README.md#editionverify) - Verifies a signature on a mint request	
 
-### [.functionsWrite](docs/sdks/functionswrite/README.md)
+### [functionsWrite](docs/sdks/functionswrite/README.md)
 
 * [editionBurn](docs/sdks/functionswrite/README.md#editionburn) - Burn
 * [editionBurnBatch](docs/sdks/functionswrite/README.md#editionburnbatch) - Burns multiple tokens	
@@ -145,7 +145,12 @@ Here's an example of one such pagination call:
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+| Error Object        | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| errors.Unauthorized | 401                 | application/json    |
+| errors.SDKError     | 400-600             | */*                 |
 
 
 ## Example
@@ -167,11 +172,10 @@ import { GlobalTest2 } from "global-test2";
     customer: "string",
   });
   } catch (e) { 
-    if (e instanceof Unauthorized) {
+    if (e instanceof errors.Unauthorized) {
       console.error(e) // handle exception 
     
   }
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -266,19 +270,16 @@ const httpClient = axios.create({
 
 const sdk = new GlobalTest2({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 
 
 <!-- Start Authentication -->
-
 # Authentication
 
 ## Per-Client Security Schemes
 
-Your SDK supports the following security scheme globally:
+This SDK supports the following security scheme globally:
 
 | Name        | Type        | Scheme      |
 | ----------- | ----------- | ----------- |

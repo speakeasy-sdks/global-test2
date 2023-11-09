@@ -1,9 +1,0 @@
-# EditionBalanceOfBatchRequest
-
-
-## Fields
-
-| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `requestBody`                                                                                              | [operations.EditionBalanceOfBatchRequestBody](../../models/operations/editionbalanceofbatchrequestbody.md) | :heavy_minus_sign:                                                                                         | N/A                                                                                                        |
-| `template`                                                                                                 | *string*                                                                                                   | :heavy_check_mark:                                                                                         | Template id                                                                                                |

@@ -1,9 +1,0 @@
-# EditionSafeTransferFromRequest
-
-
-## Fields
-
-| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `requestBody`                                                                                                  | [operations.EditionSafeTransferFromRequestBody](../../models/operations/editionsafetransferfromrequestbody.md) | :heavy_minus_sign:                                                                                             | N/A                                                                                                            |
-| `template`                                                                                                     | *string*                                                                                                       | :heavy_check_mark:                                                                                             | Template id                                                                                                    |
