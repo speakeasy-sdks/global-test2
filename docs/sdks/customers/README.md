@@ -212,7 +212,7 @@ import { GlobalTest2 } from "global-test2";
   const res = await sdk.customers.updateCustomer({
     updateCustomer: {
       customIdentifier: "org-user-123",
-      metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
+      metadata: "[{\"value\":\"value1\",\"key\":\"key1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
       thumb: new TextEncoder().encode("0xFb9Cbe5CE8"),
     },
     customer: "string",
