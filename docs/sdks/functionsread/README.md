@@ -46,10 +46,10 @@ Default Admin Role
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -60,7 +60,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -90,10 +92,10 @@ Balance of
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -105,7 +107,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -135,10 +139,10 @@ Balance of multiple accounts
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -150,7 +154,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -180,10 +186,10 @@ Contract URI
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -194,7 +200,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -222,10 +230,10 @@ import { GlobalTest2 } from "global-test2";
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -236,7 +244,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -266,10 +276,10 @@ Get Default Royalty Info
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -280,7 +290,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -310,10 +322,10 @@ Flat platform fee information
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -324,7 +336,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -354,10 +368,10 @@ Get Platform Fee Info
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -368,7 +382,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -398,10 +414,10 @@ Platform fee information
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -412,7 +428,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -442,10 +460,10 @@ Get Role Admin
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -457,7 +475,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -487,10 +507,10 @@ Get Role Member
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -502,7 +522,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -532,10 +554,10 @@ Get Role Member Count
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -547,7 +569,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -577,10 +601,10 @@ Get Royalty Info for Token
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -592,7 +616,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -622,10 +648,10 @@ Has Role
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -637,7 +663,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -667,10 +695,10 @@ Is Approved for all
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -682,7 +710,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -712,10 +742,10 @@ Is Trusted Forwarder
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -727,7 +757,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -757,10 +789,10 @@ Name
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -771,7 +803,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -801,10 +835,10 @@ Next TokenId To Mint
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -815,7 +849,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -845,10 +881,10 @@ Operator Restriction
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -859,7 +895,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -889,10 +927,10 @@ Owner
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -903,7 +941,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -933,10 +973,10 @@ Recipient of platform fees
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -947,7 +987,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -977,10 +1019,10 @@ Primary Sale Recipient
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -991,7 +1033,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1021,10 +1065,10 @@ Royalty Info
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -1036,7 +1080,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1066,10 +1112,10 @@ Recipient of sales proceeds for a token
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -1081,7 +1127,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1111,10 +1159,10 @@ Supports Interface
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -1126,7 +1174,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1156,10 +1206,10 @@ Symbol
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -1170,7 +1220,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1200,10 +1252,10 @@ Total Supply
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -1215,7 +1267,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1245,10 +1299,10 @@ URI for a token
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -1260,7 +1314,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1290,10 +1346,10 @@ Verifies a signature on a mint request
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -1305,7 +1361,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

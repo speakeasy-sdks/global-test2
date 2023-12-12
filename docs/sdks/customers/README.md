@@ -22,10 +22,10 @@ Delete the record of an existing customer
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -36,7 +36,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -66,10 +68,10 @@ View a single Customer of a Project
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -80,7 +82,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -110,10 +114,10 @@ Get a list of all the Customers of a Project
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -124,7 +128,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -154,10 +160,10 @@ Add a new customer to the project
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -172,7 +178,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -202,17 +210,17 @@ Update the record of an existing customer
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
   const res = await sdk.customers.updateCustomer({
     updateCustomer: {
       customIdentifier: "org-user-123",
-      metadata: "[{\"value\":\"value1\",\"key\":\"key1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
+      metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
       thumb: new TextEncoder().encode("0xFb9Cbe5CE8"),
     },
     customer: "string",
@@ -221,7 +229,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

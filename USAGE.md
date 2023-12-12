@@ -1,11 +1,11 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async () => {
+async function run() {
     const sdk = new GlobalTest2({
         security: {
-            default: "",
+            default: "<YOUR_BEARER_TOKEN_HERE>",
         },
     });
 
@@ -16,7 +16,9 @@ import { GlobalTest2 } from "global-test2";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

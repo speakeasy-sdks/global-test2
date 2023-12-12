@@ -20,10 +20,10 @@ Get a list of all the NFT Users
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -35,7 +35,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -64,10 +66,10 @@ Get a list of all the NFTs of a Project
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -78,7 +80,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -107,10 +111,10 @@ Show a single NFT of a Template
 ```typescript
 import { GlobalTest2 } from "global-test2";
 
-(async() => {
+async function run() {
   const sdk = new GlobalTest2({
     security: {
-      default: "",
+      default: "<YOUR_BEARER_TOKEN_HERE>",
     },
   });
 
@@ -122,7 +126,9 @@ import { GlobalTest2 } from "global-test2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

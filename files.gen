@@ -143,7 +143,6 @@ src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/deletecustomerrequest.md
 docs/sdk/models/operations/deletecustomerresponse.md
 docs/sdk/models/operations/getcustomerrequest.md
@@ -368,4 +367,5 @@ docs/sdks/customers/README.md
 docs/sdks/nfts/README.md
 docs/sdks/functionsread/README.md
 docs/sdks/functionswrite/README.md
+USAGE.md
 .gitattributes
