@@ -2,21 +2,23 @@ configVersion: 1.0.0
 management:
   docChecksum: dc215aa17b71c5f0136e5a85535fbedc
   docVersion: 1.0.0
-  speakeasyVersion: 1.126.0
-  generationVersion: 2.213.3
+  speakeasyVersion: 1.127.0
+  generationVersion: 2.220.0
 generation:
   comments: {}
   sdkClassName: global-test-2
   repoURL: https://github.com/speakeasy-sdks/global-test2.git
   usageSnippets:
     optionalPropertyRendering: withExample
+  fixes:
+    nameResolutionDec2023: false
 features:
   typescript:
-    core: 3.3.0
-    globalSecurity: 2.82.1
+    core: 3.3.9
+    globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
 typescript:
-  version: 0.9.0
+  version: 0.9.1
   author: L-Test
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: false

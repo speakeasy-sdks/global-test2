@@ -75,7 +75,7 @@ run();
 | Error Object                   | Status Code                    | Content Type                   |
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | errors.EditionBurnResponseBody | 401                            | application/json               |
-| errors.SDKError                | 400-600                        | */*                            |
+| errors.SDKError                | 4xx-5xx                        | */*                            |
 
 ## editionBurnBatch
 
@@ -122,7 +122,7 @@ run();
 | Error Object                        | Status Code                         | Content Type                        |
 | ----------------------------------- | ----------------------------------- | ----------------------------------- |
 | errors.EditionBurnBatchResponseBody | 401                                 | application/json                    |
-| errors.SDKError                     | 400-600                             | */*                                 |
+| errors.SDKError                     | 4xx-5xx                             | */*                                 |
 
 ## editionGrantRole
 
@@ -169,7 +169,7 @@ run();
 | Error Object                        | Status Code                         | Content Type                        |
 | ----------------------------------- | ----------------------------------- | ----------------------------------- |
 | errors.EditionGrantRoleResponseBody | 401                                 | application/json                    |
-| errors.SDKError                     | 400-600                             | */*                                 |
+| errors.SDKError                     | 4xx-5xx                             | */*                                 |
 
 ## editionInitialize
 
@@ -216,7 +216,7 @@ run();
 | Error Object                         | Status Code                          | Content Type                         |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ |
 | errors.EditionInitializeResponseBody | 401                                  | application/json                     |
-| errors.SDKError                      | 400-600                              | */*                                  |
+| errors.SDKError                      | 4xx-5xx                              | */*                                  |
 
 ## editionMintTo
 
@@ -263,7 +263,7 @@ run();
 | Error Object                     | Status Code                      | Content Type                     |
 | -------------------------------- | -------------------------------- | -------------------------------- |
 | errors.EditionMintToResponseBody | 401                              | application/json                 |
-| errors.SDKError                  | 400-600                          | */*                              |
+| errors.SDKError                  | 4xx-5xx                          | */*                              |
 
 ## editionMintWithSignature
 
@@ -308,7 +308,7 @@ run();
 | Error Object                                | Status Code                                 | Content Type                                |
 | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
 | errors.EditionMintWithSignatureResponseBody | 401                                         | application/json                            |
-| errors.SDKError                             | 400-600                                     | */*                                         |
+| errors.SDKError                             | 4xx-5xx                                     | */*                                         |
 
 ## editionMulticall
 
@@ -355,7 +355,7 @@ run();
 | Error Object                        | Status Code                         | Content Type                        |
 | ----------------------------------- | ----------------------------------- | ----------------------------------- |
 | errors.EditionMulticallResponseBody | 401                                 | application/json                    |
-| errors.SDKError                     | 400-600                             | */*                                 |
+| errors.SDKError                     | 4xx-5xx                             | */*                                 |
 
 ## editionRenounceRole
 
@@ -402,7 +402,7 @@ run();
 | Error Object                           | Status Code                            | Content Type                           |
 | -------------------------------------- | -------------------------------------- | -------------------------------------- |
 | errors.EditionRenounceRoleResponseBody | 401                                    | application/json                       |
-| errors.SDKError                        | 400-600                                | */*                                    |
+| errors.SDKError                        | 4xx-5xx                                | */*                                    |
 
 ## editionRevokeRole
 
@@ -449,7 +449,7 @@ run();
 | Error Object                         | Status Code                          | Content Type                         |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ |
 | errors.EditionRevokeRoleResponseBody | 401                                  | application/json                     |
-| errors.SDKError                      | 400-600                              | */*                                  |
+| errors.SDKError                      | 4xx-5xx                              | */*                                  |
 
 ## editionSafeBatchTransferFrom
 
@@ -496,7 +496,7 @@ run();
 | Error Object                                    | Status Code                                     | Content Type                                    |
 | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
 | errors.EditionSafeBatchTransferFromResponseBody | 401                                             | application/json                                |
-| errors.SDKError                                 | 400-600                                         | */*                                             |
+| errors.SDKError                                 | 4xx-5xx                                         | */*                                             |
 
 ## editionSafeTransferFrom
 
@@ -543,7 +543,7 @@ run();
 | Error Object                               | Status Code                                | Content Type                               |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
 | errors.EditionSafeTransferFromResponseBody | 401                                        | application/json                           |
-| errors.SDKError                            | 400-600                                    | */*                                        |
+| errors.SDKError                            | 4xx-5xx                                    | */*                                        |
 
 ## editionSetApprovalForAll
 
@@ -590,7 +590,7 @@ run();
 | Error Object                                | Status Code                                 | Content Type                                |
 | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
 | errors.EditionSetApprovalForAllResponseBody | 401                                         | application/json                            |
-| errors.SDKError                             | 400-600                                     | */*                                         |
+| errors.SDKError                             | 4xx-5xx                                     | */*                                         |
 
 ## editionSetContractURI
 
@@ -637,7 +637,7 @@ run();
 | Error Object                             | Status Code                              | Content Type                             |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
 | errors.EditionSetContractURIResponseBody | 401                                      | application/json                         |
-| errors.SDKError                          | 400-600                                  | */*                                      |
+| errors.SDKError                          | 4xx-5xx                                  | */*                                      |
 
 ## editionSetDefaultRoyaltyInfo
 
@@ -684,7 +684,7 @@ run();
 | Error Object                                    | Status Code                                     | Content Type                                    |
 | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
 | errors.EditionSetDefaultRoyaltyInfoResponseBody | 401                                             | application/json                                |
-| errors.SDKError                                 | 400-600                                         | */*                                             |
+| errors.SDKError                                 | 4xx-5xx                                         | */*                                             |
 
 ## editionSetFlatPlatformFeeInfo
 
@@ -731,7 +731,7 @@ run();
 | Error Object                                     | Status Code                                      | Content Type                                     |
 | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
 | errors.EditionSetFlatPlatformFeeInfoResponseBody | 401                                              | application/json                                 |
-| errors.SDKError                                  | 400-600                                          | */*                                              |
+| errors.SDKError                                  | 4xx-5xx                                          | */*                                              |
 
 ## editionSetOperatorRestriction
 
@@ -778,7 +778,7 @@ run();
 | Error Object                                     | Status Code                                      | Content Type                                     |
 | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
 | errors.EditionSetOperatorRestrictionResponseBody | 401                                              | application/json                                 |
-| errors.SDKError                                  | 400-600                                          | */*                                              |
+| errors.SDKError                                  | 4xx-5xx                                          | */*                                              |
 
 ## editionSetOwner
 
@@ -825,7 +825,7 @@ run();
 | Error Object                       | Status Code                        | Content Type                       |
 | ---------------------------------- | ---------------------------------- | ---------------------------------- |
 | errors.EditionSetOwnerResponseBody | 401                                | application/json                   |
-| errors.SDKError                    | 400-600                            | */*                                |
+| errors.SDKError                    | 4xx-5xx                            | */*                                |
 
 ## editionSetPlatformFeeInfo
 
@@ -872,7 +872,7 @@ run();
 | Error Object                                 | Status Code                                  | Content Type                                 |
 | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
 | errors.EditionSetPlatformFeeInfoResponseBody | 401                                          | application/json                             |
-| errors.SDKError                              | 400-600                                      | */*                                          |
+| errors.SDKError                              | 4xx-5xx                                      | */*                                          |
 
 ## editionSetPlatformFeeType
 
@@ -919,7 +919,7 @@ run();
 | Error Object                                 | Status Code                                  | Content Type                                 |
 | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
 | errors.EditionSetPlatformFeeTypeResponseBody | 401                                          | application/json                             |
-| errors.SDKError                              | 400-600                                      | */*                                          |
+| errors.SDKError                              | 4xx-5xx                                      | */*                                          |
 
 ## editionSetPrimarySaleRecipient
 
@@ -966,7 +966,7 @@ run();
 | Error Object                                      | Status Code                                       | Content Type                                      |
 | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
 | errors.EditionSetPrimarySaleRecipientResponseBody | 401                                               | application/json                                  |
-| errors.SDKError                                   | 400-600                                           | */*                                               |
+| errors.SDKError                                   | 4xx-5xx                                           | */*                                               |
 
 ## editionSetRoyaltyInfoForToken
 
@@ -1013,7 +1013,7 @@ run();
 | Error Object                                     | Status Code                                      | Content Type                                     |
 | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
 | errors.EditionSetRoyaltyInfoForTokenResponseBody | 401                                              | application/json                                 |
-| errors.SDKError                                  | 400-600                                          | */*                                              |
+| errors.SDKError                                  | 4xx-5xx                                          | */*                                              |
 
 ## editionSubscribeToRegistry
 
@@ -1060,4 +1060,4 @@ run();
 | Error Object                                  | Status Code                                   | Content Type                                  |
 | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
 | errors.EditionSubscribeToRegistryResponseBody | 401                                           | application/json                              |
-| errors.SDKError                               | 400-600                                       | */*                                           |
+| errors.SDKError                               | 4xx-5xx                                       | */*                                           |

@@ -57,7 +57,7 @@ run();
 | Error Object        | Status Code         | Content Type        |
 | ------------------- | ------------------- | ------------------- |
 | errors.Unauthorized | 401                 | application/json    |
-| errors.SDKError     | 400-600             | */*                 |
+| errors.SDKError     | 4xx-5xx             | */*                 |
 
 ## getCustomer
 
@@ -103,7 +103,7 @@ run();
 | Error Object        | Status Code         | Content Type        |
 | ------------------- | ------------------- | ------------------- |
 | errors.Unauthorized | 401                 | application/json    |
-| errors.SDKError     | 400-600             | */*                 |
+| errors.SDKError     | 4xx-5xx             | */*                 |
 
 ## getProjectCustomers
 
@@ -149,7 +149,7 @@ run();
 | Error Object        | Status Code         | Content Type        |
 | ------------------- | ------------------- | ------------------- |
 | errors.Unauthorized | 401                 | application/json    |
-| errors.SDKError     | 400-600             | */*                 |
+| errors.SDKError     | 4xx-5xx             | */*                 |
 
 ## newCustomer
 
@@ -199,7 +199,7 @@ run();
 | Error Object        | Status Code         | Content Type        |
 | ------------------- | ------------------- | ------------------- |
 | errors.Unauthorized | 401                 | application/json    |
-| errors.SDKError     | 400-600             | */*                 |
+| errors.SDKError     | 4xx-5xx             | */*                 |
 
 ## updateCustomer
 
@@ -250,4 +250,4 @@ run();
 | Error Object        | Status Code         | Content Type        |
 | ------------------- | ------------------- | ------------------- |
 | errors.Unauthorized | 401                 | application/json    |
-| errors.SDKError     | 400-600             | */*                 |
+| errors.SDKError     | 4xx-5xx             | */*                 |
