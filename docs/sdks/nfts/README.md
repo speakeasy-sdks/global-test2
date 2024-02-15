@@ -28,7 +28,7 @@ async function run() {
   });
 
   const res = await sdk.nfTs.listNFTUsers({
-    template: "string",
+    template: "<value>",
     token: 1,
   });
 
@@ -74,7 +74,7 @@ async function run() {
   });
 
   const res = await sdk.nfTs.listNFTs({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -119,7 +119,7 @@ async function run() {
   });
 
   const res = await sdk.nfTs.showNFT({
-    template: "string",
+    template: "<value>",
     token: 1,
   });
 

@@ -48,7 +48,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionBurn({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -95,7 +95,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionBurnBatch({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -142,7 +142,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionGrantRole({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -189,7 +189,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionInitialize({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -236,7 +236,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionMintTo({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -281,7 +281,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionMintWithSignature({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -328,7 +328,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionMulticall({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -375,7 +375,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionRenounceRole({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -422,7 +422,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionRevokeRole({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -469,7 +469,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSafeBatchTransferFrom({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -516,7 +516,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSafeTransferFrom({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -563,7 +563,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSetApprovalForAll({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -610,7 +610,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSetContractURI({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -657,7 +657,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSetDefaultRoyaltyInfo({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -704,7 +704,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSetFlatPlatformFeeInfo({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -751,7 +751,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSetOperatorRestriction({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -798,7 +798,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSetOwner({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -845,7 +845,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSetPlatformFeeInfo({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -892,7 +892,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSetPlatformFeeType({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -939,7 +939,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSetPrimarySaleRecipient({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -986,7 +986,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSetRoyaltyInfoForToken({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1033,7 +1033,7 @@ async function run() {
 
   const res = await sdk.functionsWrite.editionSubscribeToRegistry({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {

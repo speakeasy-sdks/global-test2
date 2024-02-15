@@ -1,6 +1,6 @@
 {
   "name": "global-test2",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "author": "L-Test",
   "scripts": {
     "prepare": "tsc --build",

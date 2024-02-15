@@ -10,7 +10,7 @@ async function run() {
     });
 
     const res = await sdk.customers.deleteCustomer({
-        customer: "string",
+        customer: "<value>",
     });
 
     if (res.statusCode == 200) {

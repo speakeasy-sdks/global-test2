@@ -38,7 +38,7 @@ async function run() {
     });
 
     const res = await sdk.customers.deleteCustomer({
-        customer: "string",
+        customer: "<value>",
     });
 
     if (res.statusCode == 200) {
@@ -157,7 +157,7 @@ async function run() {
     let res;
     try {
         res = await sdk.customers.deleteCustomer({
-            customer: "string",
+            customer: "<value>",
         });
     } catch (err) {
         if (err instanceof errors.Unauthorized) {
@@ -206,7 +206,7 @@ async function run() {
     });
 
     const res = await sdk.customers.deleteCustomer({
-        customer: "string",
+        customer: "<value>",
     });
 
     if (res.statusCode == 200) {
@@ -234,7 +234,7 @@ async function run() {
     });
 
     const res = await sdk.customers.deleteCustomer({
-        customer: "string",
+        customer: "<value>",
     });
 
     if (res.statusCode == 200) {
@@ -293,7 +293,7 @@ async function run() {
     });
 
     const res = await sdk.customers.deleteCustomer({
-        customer: "string",
+        customer: "<value>",
     });
 
     if (res.statusCode == 200) {

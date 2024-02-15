@@ -30,7 +30,7 @@ async function run() {
   });
 
   const res = await sdk.customers.deleteCustomer({
-    customer: "string",
+    customer: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -76,7 +76,7 @@ async function run() {
   });
 
   const res = await sdk.customers.getCustomer({
-    customer: "string",
+    customer: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.customers.getProjectCustomers({
-    project: "string",
+    project: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -172,7 +172,7 @@ async function run() {
       customIdentifier: "org-user-123",
       metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
     },
-    project: "string",
+    project: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -223,7 +223,7 @@ async function run() {
       metadata: "[{\"key\":\"key1\",\"value\":\"value1\"},{\"key\":\"key1\",\"value\":\"value1\"}]",
       thumb: new TextEncoder().encode("0xFb9Cbe5CE8"),
     },
-    customer: "string",
+    customer: "<value>",
   });
 
   if (res.statusCode == 200) {

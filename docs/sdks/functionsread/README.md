@@ -54,7 +54,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionDEFAULTADMINROLE({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -101,7 +101,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionBalanceOf({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -148,7 +148,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionBalanceOfBatch({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -194,7 +194,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionContractURI({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -238,7 +238,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionContractVersion({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -284,7 +284,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionGetDefaultRoyaltyInfo({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -330,7 +330,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionGetFlatPlatformFeeInfo({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -376,7 +376,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionGetPlatformFeeInfo({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -422,7 +422,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionGetPlatformFeeType({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -469,7 +469,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionGetRoleAdmin({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -516,7 +516,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionGetRoleMember({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -563,7 +563,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionGetRoleMemberCount({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -610,7 +610,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionGetRoyaltyInfoForToken({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -657,7 +657,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionHasRole({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -704,7 +704,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionIsApprovedForAll({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -751,7 +751,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionIsTrustedForwarder({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -797,7 +797,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionName({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -843,7 +843,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionNextTokenIdToMint({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -889,7 +889,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionOperatorRestriction({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -935,7 +935,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionOwner({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -981,7 +981,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionPlatformFeeRecipient({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1027,7 +1027,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionPrimarySaleRecipient({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1074,7 +1074,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionRoyaltyInfo({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1121,7 +1121,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionSaleRecipientForToken({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1168,7 +1168,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionSupportsInterface({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1214,7 +1214,7 @@ async function run() {
   });
 
   const res = await sdk.functionsRead.editionSymbol({
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1261,7 +1261,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionTotalSupply({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1308,7 +1308,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionUri({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1355,7 +1355,7 @@ async function run() {
 
   const res = await sdk.functionsRead.editionVerify({
     requestBody: {},
-    template: "string",
+    template: "<value>",
   });
 
   if (res.statusCode == 200) {
