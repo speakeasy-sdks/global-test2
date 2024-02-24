@@ -4,16 +4,16 @@ management:
   docChecksum: dc215aa17b71c5f0136e5a85535fbedc
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.258.2
-  releaseVersion: 0.9.3
-  configChecksum: d7e423f2a475cac55f9ccf4fb2c6bbba
+  generationVersion: 2.272.4
+  releaseVersion: 0.9.4
+  configChecksum: 367f879af8395d7b6c15087adc05e23c
   repoURL: https://github.com/speakeasy-sdks/global-test2.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/global-test2
 features:
   typescript:
-    core: 3.4.7
-    globalSecurity: 2.82.2
+    core: 3.4.8
+    globalSecurity: 2.82.3
     globalServerURLs: 2.82.1
 generatedFiles:
   - src/sdk/customers.ts
