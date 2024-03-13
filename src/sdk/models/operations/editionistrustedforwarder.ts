@@ -41,5 +41,5 @@ export class EditionIsTrustedForwarderResponse extends SpeakeasyBase {
      * Transaction submitted on chain!
      */
     @SpeakeasyMetadata()
-    res?: string;
+    string?: string;
 }

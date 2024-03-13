@@ -41,5 +41,5 @@ export class EditionGrantRoleResponse extends SpeakeasyBase {
      * Transaction submitted on chain!
      */
     @SpeakeasyMetadata()
-    res?: string;
+    string?: string;
 }

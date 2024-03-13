@@ -36,5 +36,5 @@ export class EditionPlatformFeeRecipientResponse extends SpeakeasyBase {
      * Transaction submitted on chain!
      */
     @SpeakeasyMetadata()
-    res?: string;
+    string?: string;
 }

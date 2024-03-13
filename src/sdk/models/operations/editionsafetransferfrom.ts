@@ -41,5 +41,5 @@ export class EditionSafeTransferFromResponse extends SpeakeasyBase {
      * Transaction submitted on chain!
      */
     @SpeakeasyMetadata()
-    res?: string;
+    string?: string;
 }

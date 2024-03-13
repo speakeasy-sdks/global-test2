@@ -36,5 +36,5 @@ export class EditionGetDefaultRoyaltyInfoResponse extends SpeakeasyBase {
      * Transaction submitted on chain!
      */
     @SpeakeasyMetadata()
-    res?: string;
+    string?: string;
 }

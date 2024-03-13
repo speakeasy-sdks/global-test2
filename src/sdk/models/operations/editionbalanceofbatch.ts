@@ -41,5 +41,5 @@ export class EditionBalanceOfBatchResponse extends SpeakeasyBase {
      * Transaction submitted on chain!
      */
     @SpeakeasyMetadata()
-    res?: string;
+    string?: string;
 }
